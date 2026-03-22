@@ -93,19 +93,43 @@
 </head>
 <body class="font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 glass-nav">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
-<a class="text-xl font-bold tracking-tighter text-[#1b1c17] dark:text-[#fbf9f0] font-headline" href="index.html" style="">Executive Portfolio</a>
-<div class="hidden md:flex gap-10 items-center font-headline font-medium tracking-tight">
-<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#4837dd] transition-colors duration-300" href="index.html" style="">Bio</a>
-<a class="text-[#4837dd] dark:text-[#6255f6] border-b-2 border-[#4837dd] pb-1" href="work.html" style="">Work</a>
-<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#4837dd] transition-colors duration-300" href="extracurriculars.html" style="">Extra-Curriculars</a>
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f0]/70 backdrop-blur-xl transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<a href="index.html" class="text-xl font-bold tracking-tighter text-on-surface font-headline">Executive Portfolio</a>
+<div class="hidden md:flex items-center gap-x-12 font-headline font-medium tracking-tight">
+<a class="text-on-surface/70 hover:text-primary transition-colors duration-300" href="index.html">Bio</a>
+<a class="text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="work.html">Work</a>
+<a class="text-on-surface/70 hover:text-primary transition-colors duration-300" href="extracurriculars.html">Extra-Curriculars</a>
 </div>
-<a href="contact.html" class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-semibold text-sm hover:opacity-90 transition-all active:scale-95" style="">
-                Contact
-            </a>
+<div class="flex items-center gap-3">
+<a href="contact.html" class="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">Contact</a>
+<button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl bg-surface-container gap-1.5" onclick="toggleMenu()" aria-label="Menu">
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar1"></span>
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar2"></span>
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar3"></span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-[#fbf9f0]/95 backdrop-blur-xl border-t border-outline-variant/10 px-6 py-4 flex flex-col gap-1 font-headline font-medium">
+<a class="text-on-surface/70 py-2 border-b border-outline-variant/10" href="index.html">Bio</a>
+<a class="text-primary font-semibold py-2 border-b border-outline-variant/10" href="work.html">Work</a>
+<a class="text-on-surface/70 py-2 border-b border-outline-variant/10" href="extracurriculars.html">Extra-Curriculars</a>
+<a href="contact.html" class="mt-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold text-sm text-center">Contact</a>
 </div>
 </nav>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const b1 = document.getElementById('bar1');
+  const b2 = document.getElementById('bar2');
+  const b3 = document.getElementById('bar3');
+  const isHidden = menu.classList.toggle('hidden');
+  b1.style.transform = isHidden ? '' : 'translateY(8px) rotate(45deg)';
+  b2.style.opacity = isHidden ? '1' : '0';
+  b3.style.transform = isHidden ? '' : 'translateY(-8px) rotate(-45deg)';
+}
+</script>
+
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="max-w-7xl mx-auto px-8 mb-14">
@@ -133,8 +157,8 @@
 <section class="mb-16">
 <div class="max-w-7xl mx-auto px-8">
 <!-- Heading moved above image -->
-<div class="sticky top-24 z-40 bg-[#fbf9f0]/90 backdrop-blur-md py-4 mb-12 -mx-8 px-8 border-b border-outline-variant/10">
-<h2 class="text-5xl md:text-7xl font-headline font-black tracking-tight mb-2" style="">Hummingbird Healthcare</h2>
+<div class="sticky top-0 z-40 bg-[#fbf9f0]/90 backdrop-blur-md py-3 mb-12 -mx-8 px-8 border-b border-outline-variant/10">
+<h2 class="text-2xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight mb-1" style="">Hummingbird Healthcare</h2>
 <div class="h-1.5 w-32 bg-primary rounded-full"></div>
 </div>
 <!-- Extended Image -->
@@ -185,8 +209,8 @@
 <section class="bg-surface-container-low py-16">
 <div class="max-w-7xl mx-auto px-8">
 <!-- Floating header - full width above grid like Hummingbird -->
-<div class="sticky top-24 z-40 bg-surface-container-low/90 backdrop-blur-md py-4 mb-4 -mx-8 px-8 border-b border-outline-variant/10">
-<h2 class="text-5xl md:text-7xl font-headline font-black tracking-tight mb-1" style="">Bluetree Network</h2>
+<div class="sticky top-0 z-40 bg-surface-container-low/90 backdrop-blur-md py-3 mb-4 -mx-8 px-8 border-b border-outline-variant/10">
+<h2 class="text-2xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight mb-1" style="">Bluetree Network</h2>
 <div class="h-1.5 w-32 bg-primary rounded-full"></div>
 </div>
 <p class="text-sm font-headline font-semibold uppercase tracking-widest text-on-surface-variant mb-10" style="">Acquired by Providence, 2019</p>
@@ -250,8 +274,8 @@
 </section>
 <!-- Timeline Section -->
 <section class="py-16 max-w-5xl mx-auto px-8">
-<div class="sticky top-24 z-40 bg-[#fbf9f0]/90 backdrop-blur-md py-4 mb-20 -mx-8 px-8 border-b border-outline-variant/10">
-<h2 class="text-center font-headline text-4xl font-bold" style="">Professional Timeline</h2>
+<div class="sticky top-0 z-40 bg-[#fbf9f0]/90 backdrop-blur-md py-3 mb-12 -mx-8 px-8 border-b border-outline-variant/10">
+<h2 class="text-center font-headline text-xl md:text-4xl font-bold" style="">Professional Timeline</h2>
 </div>
 <div class="relative border-l-2 border-outline-variant/30 pl-12 ml-6 space-y-16">
 <div class="relative">

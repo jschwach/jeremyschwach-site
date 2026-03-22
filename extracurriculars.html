@@ -94,21 +94,43 @@
 </head>
 <body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbf9f0]/70 dark:bg-[#1b1c17]/70 backdrop-blur-xl transition-all duration-300 border-b border-outline-variant/10">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
-<a href="index.html" class="text-xl font-bold tracking-tighter text-[#1b1c17] dark:text-[#fbf9f0] font-headline">
-                Executive Portfolio
-            </a>
-<div class="hidden md:flex items-center space-x-12 font-headline font-medium tracking-tight">
-<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#6255f6] dark:hover:text-[#6255f6] transition-colors duration-300" href="index.html">Bio</a>
-<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#6255f6] dark:hover:text-[#6255f6] transition-colors duration-300" href="work.html">Work</a>
-<a class="text-[#6255f6] dark:text-[#6255f6] border-b-2 border-[#6255f6] pb-1" href="extracurriculars.html">Extra-Curriculars</a>
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f0]/70 backdrop-blur-xl transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<a href="index.html" class="text-xl font-bold tracking-tighter text-on-surface font-headline">Executive Portfolio</a>
+<div class="hidden md:flex items-center gap-x-12 font-headline font-medium tracking-tight">
+<a class="text-on-surface/70 hover:text-primary transition-colors duration-300" href="index.html">Bio</a>
+<a class="text-on-surface/70 hover:text-primary transition-colors duration-300" href="work.html">Work</a>
+<a class="text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="extracurriculars.html">Extra-Curriculars</a>
 </div>
-<a href="contact.html" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-semibold text-sm transition-all active:opacity-80 active:scale-95">
-                Contact
-            </a>
+<div class="flex items-center gap-3">
+<a href="contact.html" class="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">Contact</a>
+<button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl bg-surface-container gap-1.5" onclick="toggleMenu()" aria-label="Menu">
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar1"></span>
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar2"></span>
+<span class="block w-5 h-0.5 bg-on-surface transition-all duration-300" id="bar3"></span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-[#fbf9f0]/95 backdrop-blur-xl border-t border-outline-variant/10 px-6 py-4 flex flex-col gap-1 font-headline font-medium">
+<a class="text-on-surface/70 py-2 border-b border-outline-variant/10" href="index.html">Bio</a>
+<a class="text-on-surface/70 py-2 border-b border-outline-variant/10" href="work.html">Work</a>
+<a class="text-primary font-semibold py-2 border-b border-outline-variant/10" href="extracurriculars.html">Extra-Curriculars</a>
+<a href="contact.html" class="mt-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold text-sm text-center">Contact</a>
 </div>
 </nav>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const b1 = document.getElementById('bar1');
+  const b2 = document.getElementById('bar2');
+  const b3 = document.getElementById('bar3');
+  const isHidden = menu.classList.toggle('hidden');
+  b1.style.transform = isHidden ? '' : 'translateY(8px) rotate(45deg)';
+  b2.style.opacity = isHidden ? '1' : '0';
+  b3.style.transform = isHidden ? '' : 'translateY(-8px) rotate(-45deg)';
+}
+</script>
+
 <main class="pt-20 pb-16">
 <!-- Hero Section -->
 <header class="max-w-7xl mx-auto px-8 mb-12">
@@ -154,29 +176,29 @@
 <div class="p-12 md:p-16 lg:p-20 bg-surface-container/50">
 <div class="grid grid-cols-2 gap-6 h-full items-center">
 <!-- Health Data Movers -->
-<a href="https://www.healthdatamovers.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
-<div class="h-14 w-full flex items-center justify-center">
+<a href="https://www.healthdatamovers.com/" target="_blank" class="group bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-row items-center gap-4">
+<div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-outline-variant/10">
 <img alt="Health Data Movers" class="max-h-full max-w-full object-contain" src="images/HDM.jpg"/>
 </div>
 <p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">former Board Director and Advisor</p>
 </a>
 <!-- Quay -->
-<a href="https://www.quay.co/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
-<div class="h-14 w-full flex items-center justify-center">
+<a href="https://www.quay.co/" target="_blank" class="group bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-row items-center gap-4">
+<div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-outline-variant/10">
 <img alt="Quay" class="max-h-full max-w-full object-contain" src="images/Quay.jpg"/>
 </div>
 <p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Board Director</p>
 </a>
 <!-- Norwood -->
-<a href="https://www.norwood.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
-<div class="h-14 w-full flex items-center justify-center">
+<a href="https://www.norwood.com/" target="_blank" class="group bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-row items-center gap-4">
+<div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-outline-variant/10">
 <img alt="Norwood" class="max-h-full max-w-full object-contain" src="images/Norwood.png"/>
 </div>
 <p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Executive advisory</p>
 </a>
 <!-- ProsperityEHR -->
-<a href="https://www.prosperityehr.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
-<div class="h-14 w-full flex items-center justify-center">
+<a href="https://www.prosperityehr.com/" target="_blank" class="group bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-row items-center gap-4">
+<div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-outline-variant/10">
 <img alt="ProsperityEHR" class="max-h-full max-w-full object-contain" src="images/ProsperityEHR_Logo.jpg"/>
 </div>
 <p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Board Director</p>
@@ -193,10 +215,10 @@
 <h2 class="section-header-large font-headline text-on-background mb-6">Investing Portfolio</h2>
 <p class="text-xl text-on-surface-variant max-w-3xl font-medium tracking-tight">A small subset of Jeremy's portfolio</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 <!-- Andium -->
 <a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://andium.com" target="_blank">
-<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<div class="h-24 flex items-center justify-center mb-4 px-3">
 <img alt="Andium" class="w-full h-full object-contain" src="images/Andium logo.png"/>
 </div>
 <h3 class="text-xl font-headline font-bold mb-2">Andium</h3>
@@ -208,7 +230,7 @@
 </a>
 <!-- Kinetik -->
 <a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://kinetik.care" target="_blank">
-<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<div class="h-24 flex items-center justify-center mb-4 px-3">
 <img alt="Kinetik" class="w-full h-full object-contain" src="images/Kinetik Logo.png"/>
 </div>
 <h3 class="text-xl font-headline font-bold mb-2">Kinetik</h3>
@@ -220,7 +242,7 @@
 </a>
 <!-- Order.co -->
 <a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://order.co" target="_blank">
-<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<div class="h-24 flex items-center justify-center mb-4 px-3">
 <img alt="Order.co" class="w-full h-full object-contain" src="images/Order.co.png"/>
 </div>
 <h3 class="text-xl font-headline font-bold mb-2">Order.co</h3>
@@ -232,7 +254,7 @@
 </a>
 <!-- Tabz -->
 <a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://runontabz.com" target="_blank">
-<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<div class="h-24 flex items-center justify-center mb-4 px-3">
 <img alt="Tabz" class="w-full h-full object-contain" src="images/Tabz logo.png"/>
 </div>
 <h3 class="text-xl font-headline font-bold mb-2">Tabz</h3>
