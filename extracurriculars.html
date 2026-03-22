@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Extra-Curriculars | Jeremy Schwach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "on-background": "#1b1c17",
+              "primary": "#6255F6",
+              "on-primary-fixed-variant": "#381fce",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f3f1e8",
+              "surface-tint": "#6255F6",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#004f52",
+              "primary-fixed": "#e3dfff",
+              "on-primary-container": "#f5f1ff",
+              "on-secondary-container": "#006e72",
+              "tertiary-fixed": "#e5e2e1",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "on-tertiary-container": "#f5f2f1",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#51f5fc",
+              "on-primary": "#ffffff",
+              "surface-container": "#f0eee5",
+              "on-surface-variant": "#464555",
+              "on-primary-fixed": "#120068",
+              "surface-bright": "#fbf9f0",
+              "surface-container-highest": "#e4e3da",
+              "surface-container-low": "#f6f4eb",
+              "on-secondary-fixed": "#002021",
+              "surface-dim": "#dcdad1",
+              "on-surface": "#1b1c17",
+              "outline-variant": "#c8c4d8",
+              "inverse-primary": "#c4c0ff",
+              "tertiary": "#575656",
+              "secondary-fixed-dim": "#25dbe2",
+              "secondary": "#00696d",
+              "on-tertiary": "#ffffff",
+              "outline": "#777587",
+              "primary-fixed-dim": "#c4c0ff",
+              "on-tertiary-fixed-variant": "#474746",
+              "surface": "#fbf9f0",
+              "error": "#ba1a1a",
+              "surface-variant": "#e4e3da",
+              "surface-container-high": "#eae8df",
+              "tertiary-container": "#6f6e6e",
+              "secondary-fixed": "#56f8ff",
+              "inverse-surface": "#30312b",
+              "background": "#fbf9f0",
+              "primary-container": "#6255f6",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#1b1b1c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+      }
+      .section-header-large {
+        font-size: 3.5rem;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        font-weight: 800;
+      }
+      @media (max-width: 768px) {
+        .section-header-large {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f0]/70 dark:bg-[#1b1c17]/70 backdrop-blur-xl transition-all duration-300 border-b border-outline-variant/10">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<a href="index.html" class="text-xl font-bold tracking-tighter text-[#1b1c17] dark:text-[#fbf9f0] font-headline">
+                Executive Portfolio
+            </a>
+<div class="hidden md:flex items-center space-x-12 font-headline font-medium tracking-tight">
+<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#6255f6] dark:hover:text-[#6255f6] transition-colors duration-300" href="index.html">Bio</a>
+<a class="text-[#1b1c17]/70 dark:text-[#fbf9f0]/70 hover:text-[#6255f6] dark:hover:text-[#6255f6] transition-colors duration-300" href="work.html">Work</a>
+<a class="text-[#6255f6] dark:text-[#6255f6] border-b-2 border-[#6255f6] pb-1" href="extracurriculars.html">Extra-Curriculars</a>
+</div>
+<a href="contact.html" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-semibold text-sm transition-all active:opacity-80 active:scale-95">
+                Contact
+            </a>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 mb-20">
+<div class="max-w-4xl">
+<div class="flex flex-wrap gap-3 mb-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label text-[10px] font-extrabold tracking-[0.2em] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container animate-pulse"></span>
+                        Extra-Curriculars
+                    </div>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-7xl font-headline font-extrabold tracking-tighter text-on-background mb-8 leading-[1.05]">
+                    Jeremy's philosophy is simple. Surround yourself with brilliant people.
+                </h1>
+<p class="text-2xl text-on-surface-variant font-medium tracking-tight border-l-4 border-primary pl-6 py-2">
+                    Keynotes, Advising, and Investing
+                </p>
+</div>
+</header>
+<!-- New Featured Image Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="w-full aspect-[16/7] md:aspect-[21/9] overflow-hidden rounded-xl shadow-lg">
+<img alt="Advisory Board Dinner" class="w-full h-full object-cover" src="images/board-dinner.jpg"/>
+</div>
+</section>
+<!-- Strategic Advising Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="mb-16">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 text-sky-800 font-label text-[10px] font-extrabold tracking-[0.2em] uppercase w-fit mb-6">STRATEGIC ADVISING</div>
+<h2 class="section-header-large font-headline text-on-background mb-6">Strategic Advising</h2>
+<p class="text-xl text-on-surface-variant max-w-3xl font-medium tracking-tight">Insights on scaling companies and Healthcare Transformation.</p>
+</div>
+<div class="relative overflow-hidden rounded-[2rem] bg-surface-container-low">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<h3 class="text-3xl md:text-4xl font-headline font-extrabold tracking-tighter mb-6 leading-tight">Partnering with Leadership Teams and Private Equity</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                            Jeremy partners with leadership teams and Private Equity groups to navigate growth inflection points by blending deep healthcare domain expertise with experience in scale.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-headline font-bold transition-all hover:opacity-90 active:scale-95">Reach out</button>
+</div>
+</div>
+<div class="p-12 md:p-16 lg:p-20 bg-surface-container/50">
+<div class="grid grid-cols-2 gap-6 h-full items-center">
+<!-- Health Data Movers -->
+<a href="https://www.healthdatamovers.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
+<div class="h-14 w-full flex items-center justify-center">
+<img alt="Health Data Movers" class="max-h-full max-w-full object-contain" src="images/logo-hdm.jpg"/>
+</div>
+<p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">former Board Director and Advisor</p>
+</a>
+<!-- Quay -->
+<a href="https://www.quay.co/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
+<div class="h-14 w-full flex items-center justify-center">
+<img alt="Quay" class="max-h-full max-w-full object-contain" src="images/logo-quay.jpg"/>
+</div>
+<p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Board Director</p>
+</a>
+<!-- Norwood -->
+<a href="https://www.norwood.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
+<div class="h-14 w-full flex items-center justify-center">
+<img alt="Norwood" class="max-h-full max-w-full object-contain" src="images/logo-norwood.png"/>
+</div>
+<p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Executive advisory</p>
+</a>
+<!-- ProsperityEHR -->
+<a href="https://www.prosperityehr.com/" target="_blank" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-4 aspect-square justify-center text-center">
+<div class="h-14 w-full flex items-center justify-center">
+<img alt="ProsperityEHR" class="max-h-full max-w-full object-contain" src="images/logo-prosperityehr.jpg"/>
+</div>
+<p class="text-[10px] leading-relaxed text-on-surface-variant font-medium">Board Director</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Investing Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="mb-16">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 text-sky-800 font-label text-[10px] font-extrabold tracking-[0.2em] uppercase w-fit mb-6">Angel Investing</div>
+<h2 class="section-header-large font-headline text-on-background mb-6">Investing Portfolio</h2>
+<p class="text-xl text-on-surface-variant max-w-3xl font-medium tracking-tight">A small subset of Jeremy's portfolio</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Andium -->
+<a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://andium.com" target="_blank">
+<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<img alt="Andium" class="w-full h-full object-contain" src="images/logo-andium.png"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Andium</h3>
+<p class="text-sm text-on-surface-variant mb-6">Industrial IoT &amp; Remote Monitoring</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">IoT</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">AI</span>
+</div>
+</a>
+<!-- Kinetik -->
+<a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://kinetik.care" target="_blank">
+<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<img alt="Kinetik" class="w-full h-full object-contain" src="images/logo-kinetik.png"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Kinetik</h3>
+<p class="text-sm text-on-surface-variant mb-6">Healthcare Transportation Technology</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">HealthTech</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Logistics</span>
+</div>
+</a>
+<!-- Order.co -->
+<a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://order.co" target="_blank">
+<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<img alt="Order.co" class="w-full h-full object-contain" src="images/logo-order.png"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Order.co</h3>
+<p class="text-sm text-on-surface-variant mb-6">Procurement &amp; Spend Management</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">FinTech</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">SaaS</span>
+</div>
+</a>
+<!-- Tabz -->
+<a class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30" href="https://runontabz.com" target="_blank">
+<div class="aspect-square flex items-center justify-center mb-12 px-4">
+<img alt="Tabz" class="w-full h-full object-contain" src="images/logo-tabz.png"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Tabz</h3>
+<p class="text-sm text-on-surface-variant mb-6">Next-gen Consumer Finance</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Consumer</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Payments</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Speaking Engagements Section -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 text-sky-800 font-label text-[10px] font-extrabold tracking-[0.2em] uppercase w-fit mb-6">SPEAKING ENGAGEMENTS</div>
+<h2 class="section-header-large font-headline text-on-background mb-6">Keynotes on Scaling Companies and Culture</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<p class="text-on-surface-variant mb-8 text-3xl leading-snug">
+                            Jeremy's "tell it like it is" approach has earned him guest lectures spots at universities, company off-sites, accelerators, and conferences. Jeremy offers stories from the trenches to keep audiences engaged and drive home hard-earned lessons.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a href="contact.html" class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-lg transition-all hover:opacity-90 active:scale-95">Inquire for Speaking</a>
+</div>
+</div>
+<div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Jeremy Schwach presenting" class="w-full h-full object-cover" src="images/ai-conf.jpg"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="max-w-7xl mx-auto px-8 my-40">
+<div class="relative overflow-hidden rounded-[2rem] bg-on-background p-12 md:p-24 text-center">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container opacity-10 blur-[80px]"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-surface tracking-tighter mb-8 leading-tight">
+                        Let's build together
+                    </h2>
+<p class="text-surface-variant text-lg mb-12 opacity-80">
+                        Interested in having Jeremy speak at your event, join your advisory board, or discuss an investment opportunity?
+                    </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a href="contact.html" class="bg-primary hover:bg-primary-container text-on-primary px-10 py-4 rounded-xl font-headline font-bold text-lg transition-all active:scale-95">
+                            Get in Touch
+                        </a>
+<button class="bg-surface/10 hover:bg-surface/20 text-surface px-10 py-4 rounded-xl font-headline font-bold text-lg transition-all border border-surface/20">
+                            Download Speaker Kit
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-[#f6f4eb] dark:bg-[#12130e]">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+<div class="font-body text-sm tracking-wide text-[#1b1c17]/50 dark:text-[#fbf9f0]/50">
+<span style="letter-spacing: 0.35px;">© 2026 JeremySchwach.com All rights reserved.</span>
+</div>
+<div class="flex gap-12 font-body text-sm tracking-wide">
+<a class="text-[#1b1c17]/50 dark:text-[#fbf9f0]/50 hover:text-[#6255f6] dark:hover:text-[#6255f6] underline-offset-4 hover:underline transition-all" href="https://linkedin.com/in/jeremy-schwach" target="_blank">LinkedIn</a>
+<a class="text-[#1b1c17]/50 dark:text-[#fbf9f0]/50 hover:text-[#6255f6] dark:hover:text-[#6255f6] underline-offset-4 hover:underline transition-all" href="/cdn-cgi/l/email-protection#a9c3ccdbccc4d0e9c3ccdbccc4d0dacac1dec8cac187cac6c4">E
