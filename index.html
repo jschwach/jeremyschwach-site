@@ -124,38 +124,69 @@ function toggleMenu() {
 }
 </script>
 
-<main class="pt-24">
+<main class="pt-16">
 <!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 py-12 md:py-20 flex flex-col md:flex-row items-center gap-16">
+<section class="max-w-7xl mx-auto px-8 py-6 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
 <div class="w-full md:w-3/5 order-1 md:order-1">
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8" style="">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-4 md:mb-8" style="">
                 Jeremy <span class="text-primary" style="">Schwach.</span>
 </h1>
-<p class="text-2xl md:text-3xl font-headline font-light text-on-surface-variant leading-relaxed max-w-2xl mb-8" style="">
+<p class="text-2xl md:text-3xl font-headline font-light text-on-surface-variant leading-relaxed max-w-2xl mb-4 md:mb-8" style="">
                 Healthcare Executive. Founder.<br/>Student of Organizational Culture.
             </p>
-<div class="flex gap-12 mt-12 flex-col">
+<!-- Mobile quick-jump links — clearly styled as navigation -->
+<div class="flex md:hidden gap-3 mt-6">
+<a href="work.html" class="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-white rounded-xl font-headline font-semibold text-sm shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-white text-base">work</span>Work
+</a>
+<a href="extracurriculars.html" class="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-on-surface text-white rounded-xl font-headline font-semibold text-sm shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-white text-base">interests</span>Extra-Curriculars
+</a>
+</div>
+
+<!-- Role tags — desktop keeps current layout, mobile gets a 2x2 grid -->
+<div class="hidden md:flex gap-6 mt-12 flex-col">
 <!-- Operating (Primary) -->
 <div class="w-full">
 <div class="items-center gap-4 bg-primary/10 px-6 py-4 rounded-xl border border-primary/20 group hover:bg-primary/15 transition-all duration-300 flex w-fit min-w-[500px]">
-<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform duration-500" style="">vital_signs</span>
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform duration-500">vital_signs</span>
 <div class="flex flex-col"><span class="font-headline font-extrabold text-base tracking-widest uppercase text-primary">Operating</span></div>
 </div>
 </div>
 <!-- Other Categories -->
 <div class="flex flex-wrap gap-12">
 <div class="flex items-center gap-3 group">
-<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform" style="">record_voice_over</span>
-<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant" style="">Advising</span>
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">record_voice_over</span>
+<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant">Advising</span>
 </div>
 <div class="flex items-center gap-3 group">
-<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform" style="">campaign</span>
-<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant" style="">Speaking</span>
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">campaign</span>
+<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant">Speaking</span>
 </div>
 <div class="flex items-center gap-3 group">
-<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform" style="">payments</span>
-<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant" style="">Investing</span>
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">payments</span>
+<span class="font-headline font-semibold text-sm tracking-widest uppercase text-on-surface-variant">Investing</span>
 </div>
+</div>
+</div>
+
+<!-- Mobile role grid — 2x2, equal spacing -->
+<div class="grid md:hidden grid-cols-2 gap-3 mt-4">
+<div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">vital_signs</span>
+<span class="font-headline font-semibold text-xs tracking-widest uppercase text-on-surface">Operating</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">record_voice_over</span>
+<span class="font-headline font-semibold text-xs tracking-widest uppercase text-on-surface">Advising</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">campaign</span>
+<span class="font-headline font-semibold text-xs tracking-widest uppercase text-on-surface">Speaking</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+<span class="font-headline font-semibold text-xs tracking-widest uppercase text-on-surface">Investing</span>
 </div>
 </div>
 </div>
