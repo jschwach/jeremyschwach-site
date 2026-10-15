@@ -972,3 +972,14 @@ form textarea {
 
 }
 
+/* Keep the compact navigation and large headings usable on narrow phones. */
+@media (max-width: 380px) {
+  .nav-links { gap: 10px; font-size: 10px; }
+  .nav-links .nav-contact { font-size: 10px; }
+  .hero h1 { font-size: 35px; }
+  .media-intro h1 { font-size: 39px; }
+  .hero-actions { gap: 12px; }
+}
+@media (max-width: 700px) {
+  form input, form textarea, .search-label input { font-size: 16px; }
+}
