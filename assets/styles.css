@@ -1121,3 +1121,66 @@ form textarea {
 @media(max-width:380px) {
   #contact-form .g-recaptcha { width:304px; transform:scale(.85); transform-origin:left top; margin-bottom:2px; }
 }
+
+/* A little more breathing room between chapters, with softer media cards. */
+.section { padding-block:64px; }
+.hero { padding-bottom:48px; }
+.latest { padding-top:24px; }
+.career { margin-top:34px; padding-top:26px; }
+.media-intro { padding-top:60px; padding-bottom:48px; }
+.media-section { padding-bottom:64px; }
+.media-cta { padding-block:48px; }
+.media-grid { gap:28px 24px; }
+.media-card, .featured-strip {
+  border-radius:20px;
+  border-color:rgba(64,42,63,.13);
+  box-shadow:0 4px 16px rgba(48,31,47,.035);
+}
+.media-card { overflow:hidden; }
+.media-card .media-art { border-radius:19px 19px 0 0; }
+.featured-strip .featured-thumbnail { border-radius:12px; }
+@media(max-width:700px) {
+  .section { padding-block:44px; }
+  .hero { padding-bottom:40px; }
+  .latest { padding-top:16px; }
+  .career { margin-top:28px; padding-top:24px; }
+  .media-intro { padding-top:40px; padding-bottom:36px; }
+  .media-section { padding-bottom:44px; }
+  .media-cta { padding-block:36px; }
+  .media-grid { gap:24px; }
+}
+
+/* Full-width tonal chapters make each change of subject easy to see. */
+.hero, .about, #advising, .latest, .media-intro, .media-section, .media-cta {
+  position:relative;
+  isolation:isolate;
+}
+.hero::before, .about::before, #advising::before, .latest::before,
+.media-intro::before, .media-section::before, .media-cta::before {
+  content:"";
+  position:absolute;
+  inset:0 calc((100% - 100vw) / 2);
+  z-index:-1;
+  pointer-events:none;
+}
+.hero::before { background:linear-gradient(120deg,#faf8f0 25%,#e4dcf2 100%); }
+.about::before { background:linear-gradient(115deg,#f4ebde,#faf8f0 80%); }
+.work-section { background:linear-gradient(145deg,#e9e1f3,#f4eef8 65%,#e1d6eb); }
+#advising::before { background:linear-gradient(120deg,#fbf7ed,#eee2d5); }
+.latest::before { background:linear-gradient(110deg,#e9e1f5,#f4effa); }
+.contact { background:linear-gradient(120deg,#28212e,#43283f); }
+.media-intro::before { background:linear-gradient(120deg,#faf8f0 15%,#e5d9f2); }
+.media-section { padding-top:36px; }
+.media-section::before { background:linear-gradient(160deg,#f8f3e8,#f0e8f7 65%,#e7dff0); }
+.media-cta::before { background:linear-gradient(110deg,#e1d5ed,#f1e9f7); }
+.latest { padding-top:48px; }
+@media(min-width:701px) and (max-height:820px) {
+  .section { padding-block:48px; }
+  .hero { padding-block:36px; }
+  .media-intro { padding-block:44px 36px; }
+  .media-cta { padding-block:40px; }
+}
+@media(max-width:700px) {
+  .latest { padding-top:40px; }
+  .media-section { padding-top:28px; }
+}
