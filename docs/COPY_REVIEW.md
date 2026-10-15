@@ -28,6 +28,8 @@ Healthcare. Culture. What comes next.
 
 3× Founder
 
+$100M raised
+
 A little context
 
 Turns out if you look around the room and you're the dumbest one, you're doing things right.

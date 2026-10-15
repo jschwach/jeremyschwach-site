@@ -1092,3 +1092,15 @@ form textarea {
 }
 
 .work-card > .bluetree-photo { height:auto; object-fit:contain; }
+
+.media-intro-copy > .eyebrow { max-width:none; font-size:9px; letter-spacing:.08em; line-height:1.5; }
+@media(min-width:1001px) { .media-intro-copy > .eyebrow { white-space:nowrap; } }
+
+.stats { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.stats div { padding-inline:20px; gap:12px; }
+.stats strong { white-space:nowrap; }
+@media(max-width:1000px) { .stats div { flex-direction:column; align-items:flex-start; gap:5px; }.stats strong { font-size:30px; } }
+@media(max-width:700px) { .stats { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 0; }.stats div { padding-inline:14px; }.stats div:nth-child(odd) { padding-left:0; }.stats div:nth-child(even) { border-right:0; } }
+/* Consistent company photo windows keep both card headings aligned. */
+.work-card > img, .work-card > .bluetree-photo { width:100%; height:auto; aspect-ratio:16 / 9; object-fit:cover; object-position:center; }
+.work-body .card-top { min-height:36px; }

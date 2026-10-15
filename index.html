@@ -15,14 +15,14 @@
 <style>
 .hero { grid-template-columns:1.1fr 1fr; gap:42px; }
 .hero-collage { position:relative; margin:0; padding:40px 0 5px; isolation:isolate; }
-.collage-monogram { position:absolute; z-index:-1; width:92%; height:95%; object-fit:contain; top:-12px; left:10%; opacity:.12; }
+.collage-monogram { position:absolute; z-index:3; width:180px; height:auto; object-fit:contain; top:-45px; left:52%; opacity:1; pointer-events:none; }
 .collage-grid { display:grid; grid-template-columns:1.55fr 1fr; grid-template-rows:auto auto; gap:13px; align-items:center; }
-.collage-grid img { width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 8px 20px #24182c16; }
+.collage-grid img { position:relative; z-index:1; width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 8px 20px #24182c16; }
 .collage-speaker { grid-column:1; grid-row:1; }
 .collage-lawn { grid-column:1; grid-row:2; }
 .collage-stairs { grid-column:2; grid-row:1 / span 2; }
 .hero-collage figcaption { font-size:10px; color:var(--muted); letter-spacing:.06em; margin-top:13px; }
-@media(max-width:700px) { .hero { grid-template-columns:1fr; gap:20px; }.hero-collage { padding-top:10px; }.collage-grid { grid-template-columns:1.5fr 1fr; }.collage-speaker { grid-column:1 / -1; }.collage-lawn { grid-column:1; grid-row:2; }.collage-stairs { grid-column:2; grid-row:2; }.collage-monogram { top:0; } }
+@media(max-width:700px) { .hero { grid-template-columns:1fr; gap:20px; }.hero-collage { padding-top:10px; }.collage-grid { grid-template-columns:1.5fr 1fr; }.collage-speaker { grid-column:1 / -1; }.collage-lawn { grid-column:1; grid-row:2; }.collage-stairs { grid-column:2; grid-row:2; }.collage-monogram { top:-20px; left:auto; right:0; width:130px; } }
 </style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -74,6 +74,10 @@
 <div>
 <strong>3×</strong>
 <span>Founder</span>
+</div>
+<div>
+<strong>$100M</strong>
+<span>raised</span>
 </div>
 </div>
 <section class="wrap section about" id="about">
