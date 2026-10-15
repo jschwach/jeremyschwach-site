@@ -633,10 +633,6 @@ form textarea {
   font-size:10px;
   color:var(--muted)
 }
-.media-bottom span:last-child {
-  font-size:20px;
-  color:var(--purple)
-}
 .empty-state {
   text-align:center;
   padding:60px 20px;
