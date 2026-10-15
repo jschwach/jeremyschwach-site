@@ -1090,3 +1090,5 @@ form textarea {
  .brand-monogram { width:56px; }
  .wordmark { flex-shrink:0; }
 }
+
+.work-card > .bluetree-photo { height:auto; object-fit:contain; }
