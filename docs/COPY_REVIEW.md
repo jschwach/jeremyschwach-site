@@ -32,9 +32,9 @@ A little context
 
 Turns out if you look around the room and you're the dumbest one, you're doing things right.
 
-I’ve spent 20+ years in and around healthcare, much of it in the Epic ecosystem. There are few things more complicated than healthcare. So it turns out that if you want to solve problems, the key is finding the best humans. And the best humans want to work at great places. Build one of those, and you’ve got a real advantage.
+I’ve spent 20+ years in and around healthcare, much of it in the Epic ecosystem. There are few things more complicated than US healthcare. And it turns out, that if you want to solve the hardest problems, you have to find the best humans. And the best humans want to work at great places. Build one of those, and you’ve got a real advantage.
 
-That’s been my main goal. We built Bluetree (acquired by Providence in 2019) with the simple premise that keeping the bar high would be a competitive advantage. It was. And now we're taking those learnings and building Hummingbird, where we're applying the same principles to an even more challenging space: making getting access to care actually work in America.
+That’s been my primary strategy. We built Bluetree (acquired by Providence in 2019) with the simple premise that keeping the bar high would be a competitive advantage. It was. And now we're taking those learnings to Hummingbird, where we're applying the same principles to an even more challenging space: making getting access to care actually work in America.
 
 Selected work
 
