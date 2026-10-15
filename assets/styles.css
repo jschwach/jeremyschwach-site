@@ -1184,3 +1184,6 @@ form textarea {
   .latest { padding-top:40px; }
   .media-section { padding-top:28px; }
 }
+
+/* Full-bleed bands must not create horizontal scrolling beside the scrollbar. */
+body { overflow-x:clip; }
