@@ -1,7 +1,7 @@
 const frame = document.querySelector('#preview');
 let observer;
 function fit() {
-  if (document.querySelector('#viewport').checked) { frame.style.height = Math.max(480, innerHeight - 150) + 'px'; return; }
+  if (document.querySelector('#viewport').checked) { frame.style.height = (document.querySelector('#height').value === 'auto' ? Math.max(480, innerHeight - 150) : Number(document.querySelector('#height').value)) + 'px'; return; }
   try { frame.style.height = frame.contentDocument.body.scrollHeight + 'px'; } catch (_) {}
 }
 frame.addEventListener('load', () => {
@@ -20,3 +20,5 @@ document.querySelector('#width').addEventListener('change', event => {
 
 document.querySelector('#viewport').addEventListener('change', fit);
 addEventListener('resize', fit);
+
+document.querySelector('#height').addEventListener('change',fit);
