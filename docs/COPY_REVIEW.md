@@ -30,9 +30,9 @@ Healthcare. Culture. What comes next.
 
 A little context
 
-The people part / is the whole point.
+Turns out if you look around the room and you're the dumbest one, you're doing things right.
 
-I’ve spent 20+ years in and around healthcare, much of it in the Epic ecosystem. The work gets complicated. The premise is pretty simple: great people want to work at great places. Build one, and you’ve got a real advantage.
+I’ve spent 20+ years in and around healthcare, much of it in the Epic ecosystem. There are few things more complicated than healthcare. So it turns out that if you want to solve problems, the key is finding the best humans. And the best humans want to work at great places. Build one of those, and you’ve got a real advantage.
 
 That’s been the thread from Bluetree (acquired by Providence in 2019) to Hummingbird. Transparency, autonomy, and being direct. Also, surrounding myself with people who know things I don’t. There are plenty.
 

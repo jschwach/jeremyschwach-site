@@ -1023,3 +1023,5 @@ form textarea {
 @media(max-width:700px){ .media-art{margin:-22px -22px 20px;height:190px}.media-intro::after{width:150px;height:120px;right:0;top:50px;opacity:.55} }
 .media-art .media-image { z-index: 2; }
 .media-bottom .appearance-note { font-size:10px; color:var(--muted); }
+
+.about h2 { font-size:clamp(25px,2.6vw,34px); line-height:1.2; }
