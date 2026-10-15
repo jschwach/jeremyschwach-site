@@ -34,7 +34,7 @@ Turns out if you look around the room and you're the dumbest one, you're doing t
 
 I’ve spent 20+ years in and around healthcare, much of it in the Epic ecosystem. There are few things more complicated than healthcare. So it turns out that if you want to solve problems, the key is finding the best humans. And the best humans want to work at great places. Build one of those, and you’ve got a real advantage.
 
-That’s been the thread from Bluetree (acquired by Providence in 2019) to Hummingbird. Transparency, autonomy, and being direct. Also, surrounding myself with people who know things I don’t. There are plenty.
+That’s been my main goal. We built Bluetree (acquired by Providence in 2019) with the simple premise that keeping the bar high would be a competitive advantage. It was. And now we're taking those learnings and building Hummingbird, where we're applying the same principles to an even more challenging space: making getting access to care actually work in America.
 
 Selected work
 
