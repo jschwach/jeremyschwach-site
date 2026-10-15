@@ -32,3 +32,17 @@ assert 'Download Speaker Kit' not in (root/'index.html').read_text()
 assert 'data-netlify="true"' in (root/'index.html').read_text()
 assert 'assets/styles.css' in (root/'index.html').read_text()
 print('PASS: local links, legacy targets, anchors, IDs, image alt text, H1s, external-tab safety, content records, form markup.')
+
+# Every public media destination has a separately keyboard-reachable arrow.
+from html.parser import HTMLParser
+class MediaArrowParser(HTMLParser):
+    def __init__(self): super().__init__(); self.links=[]
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs)
+        if tag=='a' and 'media-arrow-link' in attrs.get('class','').split(): self.links.append(attrs)
+arrow_parser=MediaArrowParser()
+arrow_parser.feed((root/'insights.html').read_text())
+records=json.loads((root/'assets/content.json').read_text())
+assert len(arrow_parser.links)==sum(bool(x.get('url')) for x in records)
+assert all(x.get('href','').startswith('https://') and x.get('aria-label','').startswith('Open ') for x in arrow_parser.links)
+print('PASS: all public media arrows are named, keyboard-reachable links.')

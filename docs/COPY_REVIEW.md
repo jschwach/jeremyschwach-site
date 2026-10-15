@@ -16,7 +16,7 @@ Good companies. / Great people.
 
 I’m Jeremy Schwach. I build healthcare companies, back good people, and spend a lot of time thinking about creating a good place to work.
 
-Three companies in, I’m still a student of the culture part. Turns out that’s the hard part.
+Three companies in, I’m still a student of building great culture. Turns out that’s the hard part.
 
 Explore my work ↓ Ideas & conversations
 

@@ -23,8 +23,8 @@ for item in items:
         position=escape(item.get('image_position','50% 50%'),quote=True)
         art+=f'<img class="media-image{fit}" src="{escape(item["image"],quote=True)}" alt="{escape(item.get("image_alt",item["source"]),quote=True)}" style="object-position:{position}" loading="lazy">'
     art+='</div>'
-    end=arrow if item.get('url') else '<span class="appearance-note">In person</span>'
-    cards.append(f'''<article class="media-card" data-type="{item['type']}" data-search="{search}">{art}<div class="card-top"><span class="type-label">{labels[item['type']]}</span><span>{escape(display_date)}</span></div><h2>{title}</h2><p>{escape(item['description'])}</p><div class="media-bottom"><span>{escape(item['source'])}</span><span aria-hidden="true">{end}</span></div></article>''')
+    end=f'<a class="media-arrow-link" href="{escape(item["url"])}" target="_blank" rel="noopener noreferrer" aria-label="Open {escape(item["title"], quote=True)}">{arrow}</a>' if item.get('url') else '<span class="appearance-note">In person</span>'
+    cards.append(f'''<article class="media-card" data-type="{item['type']}" data-search="{search}">{art}<div class="card-top"><span class="type-label">{labels[item['type']]}</span><span>{escape(display_date)}</span></div><h2>{title}</h2><p>{escape(item['description'])}</p><div class="media-bottom"><span>{escape(item['source'])}</span>{end}</div></article>''')
 page=root/'insights.html';text=page.read_text()
 text=re.sub(r'(<div class="media-grid">).*?(</div><div class="empty-state")',lambda m:m[1]+''.join(cards)+m[2],text,flags=re.S)
 text=re.sub(r'(<p class="result-count" aria-live="polite">).*?(</p>)',lambda m:m[1]+f'{len(items)} items'+m[2],text)
