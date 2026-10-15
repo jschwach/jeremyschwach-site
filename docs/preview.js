@@ -1,15 +1,8 @@
 const frame = document.querySelector('#preview');
 let observer;
 function fit() {
-  const fixed = document.querySelector('#viewport').checked;
-  const height = document.querySelector('#height').value;
-  try { frame.style.height = (fixed ? (height === 'auto' ? Math.max(480, innerHeight - 150) : Number(height)) : frame.contentDocument.body.scrollHeight) + 'px'; } catch (_) {}
-  const width = Number(document.querySelector('#width').value);
-  const scale = Math.min(1, (document.documentElement.clientWidth - 48) / width);
-  frame.style.transform = `scale(${scale})`;
-  frame.style.transformOrigin = 'top left';
-  frame.style.marginLeft = Math.max(0, (document.documentElement.clientWidth - 48 - width * scale) / 2) + 'px';
-  frame.parentElement.style.height = (parseFloat(frame.style.height) * scale + 48) + 'px';
+  if (document.querySelector('#viewport').checked) { frame.style.height = Math.max(480, innerHeight - 150) + 'px'; return; }
+  try { frame.style.height = frame.contentDocument.body.scrollHeight + 'px'; } catch (_) {}
 }
 frame.addEventListener('load', () => {
   if (observer) observer.disconnect();
@@ -27,5 +20,3 @@ document.querySelector('#width').addEventListener('change', event => {
 
 document.querySelector('#viewport').addEventListener('change', fit);
 addEventListener('resize', fit);
-
-document.querySelector('#height').addEventListener('change',fit);
