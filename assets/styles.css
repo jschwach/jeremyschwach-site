@@ -1114,3 +1114,10 @@ form textarea {
 /* Company marks use the existing proof footer rather than a dedicated header row. */
 .work-proof { display:grid; grid-template-columns:minmax(0,1fr) 90px; column-gap:16px; align-items:start; }
 .work-proof > strong, .work-proof > span { grid-column:1; }
+
+/* Keep the managed CAPTCHA readable and contained on narrow phones. */
+#contact-form { min-width:0; }
+#contact-form .g-recaptcha { margin-bottom:14px; }
+@media(max-width:380px) {
+  #contact-form .g-recaptcha { width:304px; transform:scale(.85); transform-origin:left top; margin-bottom:2px; }
+}
