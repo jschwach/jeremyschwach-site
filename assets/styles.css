@@ -1209,7 +1209,8 @@ html, body { overflow-x:clip; }
 .career-section .career { margin:0; padding:0; border:0; }
 @media(min-width:1001px) {
   .section { padding-block:28px; }
-  .hero { padding-block:24px; }
+  .hero { padding-block:18px; }
+  .stats { padding-block:15px; }
   .hero .hero-collage { max-width:430px; padding-top:10px; justify-self:end; }
   .section-heading { margin-bottom:20px; }
   .work-card { display:grid; grid-template-columns:minmax(0,1fr) 210px; gap:12px 20px; padding:22px; align-content:start; }
@@ -1219,11 +1220,13 @@ html, body { overflow-x:clip; }
   .work-body .card-top .eyebrow { max-width:none; }
   .work-body h3 { grid-column:1; margin:0; font-size:24px; }
   .work-body > p, .work-proof { grid-column:1 / -1; margin:0; }
-  .career .career-photo { height:270px; }
-  .beyond-card { padding:18px; }
-  .beyond-card h3 { margin:12px 0; }
+  .career .career-photo { height:250px; }
+  .career-section { padding-block:24px; }
+  #advising { padding-block:20px; }
+  .beyond-card { padding:16px; }
+  .beyond-card h3 { margin:10px 0; }
   .company-list { margin-top:14px; }
-  .company-list li { display:grid; grid-template-columns:120px minmax(0,1fr); align-items:center; gap:12px; padding:8px 0; }
+  .company-list li { display:grid; grid-template-columns:120px minmax(0,1fr); align-items:center; gap:12px; padding:6px 0; }
   .company-list li > span { text-align:right; }
   .company-logo { height:24px; margin-bottom:3px; }
   .company-brand .andium-logo-window { height:24px; margin-bottom:3px; }
