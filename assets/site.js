@@ -1,4 +1,20 @@
 (() => {
+  const career = document.querySelector('.career');
+  if (career && typeof IntersectionObserver !== 'undefined') {
+    // Open in plain HTML; enhance to a one-time reveal without animation or focus changes.
+    career.open = false;
+    const summary = career.querySelector('summary');
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        career.open = true;
+        observer.disconnect();
+      }
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
+    observer.observe(summary);
+    // A deliberate mouse or keyboard toggle always wins over the automatic reveal.
+    summary.addEventListener('click', () => observer.disconnect(), { once: true });
+  }
+
   document.querySelectorAll('.media-art img').forEach(img => { img.addEventListener('error', () => { img.hidden = true; }); if (img.complete && !img.naturalWidth) img.hidden = true; });
   const filters = document.querySelector('.filter-bar');
   if (filters) {

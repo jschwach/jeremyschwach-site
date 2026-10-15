@@ -29,3 +29,13 @@ async function formTest(mode){
  else{assert(!reset);assert.match(status.textContent,/wasn’t sent/)}
 }
 (async()=>{for(const mode of ['success','http-error','network','pending'])await formTest(mode);console.log('PASS: filters, combined search, empty state, reset, pressed states; form success, HTTP/network failure, retained input and duplicate-submit prevention (mock DOM/network).');})();
+// Native disclosure stays keyboard-operable; reveal is once-only and animation-free.
+for(const manual of [false,true]) {
+ const summary=el();const career=el({open:true,querySelector:()=>summary});let observer;
+ class Observer {constructor(callback){this.callback=callback;this.disconnected=false;observer=this}observe(target){this.target=target}disconnect(){this.disconnected=true}}
+ vm.runInNewContext(source,{document:{querySelector:s=>s==='.career'?career:null,querySelectorAll:()=>[]},IntersectionObserver:Observer});
+ assert.equal(career.open,false);assert.equal(observer.target,summary);
+ if(manual){summary.events.click();assert(observer.disconnected)}
+ else{observer.callback([{isIntersecting:false}]);assert.equal(career.open,false);observer.callback([{isIntersecting:true}]);assert.equal(career.open,true);assert(observer.disconnected)}
+}
+console.log('PASS: one-time history reveal and manual-toggle override.');
