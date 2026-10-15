@@ -1163,16 +1163,16 @@ form textarea {
   z-index:-1;
   pointer-events:none;
 }
-.hero::before { background:linear-gradient(120deg,#faf8f0 25%,#e4dcf2 100%); }
-.about::before { background:linear-gradient(115deg,#f4ebde,#faf8f0 80%); }
-.work-section { background:linear-gradient(145deg,#e9e1f3,#f4eef8 65%,#e1d6eb); }
-#advising::before { background:linear-gradient(120deg,#fbf7ed,#eee2d5); }
-.latest::before { background:linear-gradient(110deg,#e9e1f5,#f4effa); }
+.hero::before { background:linear-gradient(120deg,#faf8f0 25%,#eee9df 100%); }
+.about::before { background:linear-gradient(115deg,#f1ece3,#faf8f0 80%); }
+.work-section { background:linear-gradient(145deg,#ede7dc,#f5f1e9 65%,#e9e3d8); }
+#advising::before { background:linear-gradient(120deg,#faf8f1,#f0ebe2); }
+.latest::before { background:linear-gradient(110deg,#eee9df,#f7f4ed); }
 .contact { background:linear-gradient(120deg,#28212e,#43283f); }
-.media-intro::before { background:linear-gradient(120deg,#faf8f0 15%,#e5d9f2); }
+.media-intro::before { background:linear-gradient(120deg,#faf8f0 15%,#ece6db); }
 .media-section { padding-top:36px; }
-.media-section::before { background:linear-gradient(160deg,#f8f3e8,#f0e8f7 65%,#e7dff0); }
-.media-cta::before { background:linear-gradient(110deg,#e1d5ed,#f1e9f7); }
+.media-section::before { background:linear-gradient(160deg,#f8f5ee,#f1ede5 65%,#eae5db); }
+.media-cta::before { background:linear-gradient(110deg,#e9e3d8,#f5f1e9); }
 .latest { padding-top:48px; }
 @media(min-width:701px) and (max-height:820px) {
   .section { padding-block:48px; }

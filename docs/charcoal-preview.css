@@ -1,0 +1,10 @@
+/* Review-only alternative. Cream cards remain readable against charcoal bands. */
+.work-section { background:linear-gradient(125deg,#2d3031,#414543); border-color:#454946; color:#faf8f0; }
+.work-section .section-heading .eyebrow { color:#d9ceba; }
+.work-section .section-heading p:not(.eyebrow), .work-section .career summary span, .work-section .timeline p { color:#deddd5; }
+.work-section .work-card { color:var(--ink); }
+.work-section .career { border-color:#6c706a; }
+.work-section .timeline span { color:#e4d4ad; }
+.media-intro::before { background:linear-gradient(125deg,#2d3031,#414543); }
+.media-intro { color:#faf8f0; }
+.media-intro p, .media-intro .eyebrow { color:#dfdbcf; }

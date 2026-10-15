@@ -1,3 +1,16 @@
+const themeControl = document.querySelector('#theme');
+if (new URLSearchParams(location.search).get('theme') === 'charcoal') themeControl.value = 'charcoal';
+function applyTheme() {
+  const doc = frame.contentDocument;
+  doc.querySelector('#review-theme')?.remove();
+  if (themeControl.value === 'charcoal') {
+    const link = doc.createElement('link');
+    link.id = 'review-theme'; link.rel = 'stylesheet';
+    link.href = '/docs/charcoal-preview.css';
+    doc.head.append(link);
+  }
+}
+themeControl.addEventListener('change', applyTheme);
 const frame = document.querySelector('#preview');
 let observer;
 function fit() {
@@ -6,6 +19,7 @@ function fit() {
 }
 frame.addEventListener('load', () => {
   if (observer) observer.disconnect();
+  applyTheme();
   frame.style.height = '900px';
   fit();
   observer = new ResizeObserver(() => requestAnimationFrame(fit));
