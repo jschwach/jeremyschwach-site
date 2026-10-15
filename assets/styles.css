@@ -1067,3 +1067,4 @@ form textarea {
   .timeline-date::before { top:2px; left:-24px; width:8px; height:8px; border-width:2px; }
 }
 @media(prefers-reduced-motion:reduce) { .timeline article { transform:none; opacity:1; } }
+@media(min-width:701px) { .timeline-date { text-align:center; }.timeline-date::before { left:calc(50% - 8px); } }
