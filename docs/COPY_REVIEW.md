@@ -20,8 +20,6 @@ Three companies in, I’m still a student of building great culture. Turns out t
 
 Explore my work ↓ Ideas & conversations
 
-Healthcare. Culture. What comes next.
-
 15+ Years leading as CEO
 
 20+ Years in the Epic ecosystem
