@@ -1021,3 +1021,4 @@ form textarea {
 [data-type="speaking"] .art-fallback { background:linear-gradient(135deg,#c5e9dc,#93ccbe); color:#155b49; }
 .appearance-note { color:var(--muted); font-size:10px; white-space:nowrap; }
 @media(max-width:700px){ .media-art{margin:-22px -22px 20px;height:190px}.media-intro::after{width:150px;height:120px;right:0;top:50px;opacity:.55} }
+.media-art .media-image { z-index: 2; }
