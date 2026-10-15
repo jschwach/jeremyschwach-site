@@ -1107,6 +1107,10 @@ form textarea {
 .media-intro-copy > h1 { margin-bottom:20px; }
 @media(max-width:700px) { .media-intro-copy > h1 { margin-bottom:18px; } }
 
-.work-brand-logo { display:block; width:150px; max-width:100%; height:44px; object-fit:contain; object-position:left center; margin-bottom:12px; filter:grayscale(1); opacity:.72; mix-blend-mode:multiply; }
+.work-brand-logo { display:block; width:90px; max-width:100%; height:32px; object-fit:contain; object-position:right bottom; margin:0; filter:grayscale(1); opacity:.65; mix-blend-mode:multiply; grid-column:2; grid-row:1 / 3; align-self:end; justify-self:end; }
 
 .work-brand-logo-bluetree { padding:0; background:transparent; border-radius:0; }
+
+/* Company marks use the existing proof footer rather than a dedicated header row. */
+.work-proof { display:grid; grid-template-columns:minmax(0,1fr) 90px; column-gap:16px; align-items:start; }
+.work-proof > strong, .work-proof > span { grid-column:1; }
