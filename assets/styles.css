@@ -1052,3 +1052,18 @@ form textarea {
 .career .career-photo { height:300px; max-height:none; object-fit:contain; object-position:center; background:#eae8df; }
 .career { overflow-anchor:none; }
 .career .timeline { overflow:hidden; box-sizing:border-box; }
+
+/* The early chapters advance right-to-left on desktop, top-to-bottom on phones. */
+.career .timeline { position:relative; direction:rtl; padding-top:55px; perspective:1000px; }
+.timeline::before { content:''; position:absolute; top:33px; right:0; left:0; height:2px; background:var(--purple); transform:scaleX(var(--track-progress,1)); transform-origin:right; }
+.timeline::after { content:''; position:absolute; top:28px; left:2px; width:10px; height:10px; border-left:2px solid var(--purple); border-bottom:2px solid var(--purple); transform:rotate(45deg); opacity:var(--track-progress,1); }
+.timeline article { direction:ltr; position:relative; transform-origin:center top; transform:translateY(calc((1 - var(--chapter-reveal,1)) * 65px)) rotateX(calc((1 - var(--chapter-reveal,1)) * -55deg)); opacity:var(--chapter-reveal,1); }
+.timeline-date { display:block; position:relative; margin:0 0 16px; font-weight:600; }
+.timeline-date::before { content:''; position:absolute; width:10px; height:10px; border:3px solid var(--purple); background:var(--paper,#fbf9f0); border-radius:50%; top:-29px; left:0; }
+@media(max-width:700px) {
+  .career .timeline { direction:ltr; padding-left:24px; padding-top:30px; }
+  .timeline::before { top:30px; bottom:0; left:6px; right:auto; width:2px; height:auto; transform:scaleY(var(--track-progress,1)); transform-origin:top; }
+  .timeline::after { top:auto; bottom:2px; left:2px; transform:rotate(-45deg); }
+  .timeline-date::before { top:2px; left:-24px; width:8px; height:8px; border-width:2px; }
+}
+@media(prefers-reduced-motion:reduce) { .timeline article { transform:none; opacity:1; } }

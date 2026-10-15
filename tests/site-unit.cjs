@@ -32,13 +32,17 @@ async function formTest(mode){
 // Scroll progress, reduced motion and native manual control.
 for (const reduced of [false,true]) {
  let top=1000;const summary=el({getBoundingClientRect:()=>({top})});
- const timeline=el({style:{},scrollHeight:600});
+ const style=()=>({setProperty(k,v){this[k]=v},removeProperty(k){delete this[k]}});
+ const chapters=[el({style:style()}),el({style:style()}),el({style:style()})];
+ const timeline=el({style:style(),offsetHeight:600,querySelectorAll:()=>chapters});
  const career=el({open:true,querySelector:s=>s==='summary'?summary:timeline});
  const events={};const motion={matches:reduced,addEventListener(){},removeEventListener(){}};
  vm.runInNewContext(source,{document:{querySelector:s=>s==='.career'?career:null,querySelectorAll:()=>[]},innerHeight:1000,matchMedia:()=>motion,requestAnimationFrame:fn=>fn(),addEventListener:(type,fn)=>events[type]=fn,removeEventListener:type=>delete events[type]});
  assert.equal(career.open,false);
  top=575;events.scroll();assert.equal(career.open,true);
  assert.equal(timeline.style.height,reduced?'auto':'300px');
+ assert.equal(timeline.style['--track-progress'],reduced?'1':'0.5');
+ if(!reduced) assert(Number(chapters[0].style['--chapter-reveal'])>Number(chapters[2].style['--chapter-reveal']));
  top=200;events.scroll();assert.equal(timeline.style.height,'auto');
  top=1000;events.scroll();assert.equal(career.open,false);
  summary.events.click();assert.equal(timeline.style.height,'');assert.equal(events.scroll,undefined);

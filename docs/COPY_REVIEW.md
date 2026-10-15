@@ -60,6 +60,12 @@ We built a healthcare IT consulting firm that worked with 18 of the top 20 U.S. 
 
 The longer story Epic, Northwell & the first venture
 
+2001
+
+Mad-Bus
+
+Getting home to Minnesota from UW–Madison was a pain, so I started a bus company from my dorm room. A fairly literal solution to a transportation problem. Mad-Bus ran for almost a decade.
+
 2005–2011
 
 Epic
@@ -71,12 +77,6 @@ Leading complex implementations for major academic medical centers.
 Northwell
 
 Advising on enterprise health system modernization.
-
-2001
-
-Mad-Bus
-
-Getting home to Minnesota from UW–Madison was a pain, so I started a bus company from my dorm room. A fairly literal solution to a transportation problem. Mad-Bus ran for almost a decade.
 
 Beyond the day job
 

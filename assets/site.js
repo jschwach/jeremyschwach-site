@@ -3,6 +3,7 @@
   if (career && typeof requestAnimationFrame !== 'undefined') {
     const summary = career.querySelector('summary');
     const timeline = career.querySelector('.timeline');
+    const chapters = [...timeline.querySelectorAll('article')];
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
     let manual = false;
     let queued = false;
@@ -17,9 +18,13 @@
       if (amount > 0) {
         // Summary position is stable: only the content beneath it changes height.
         timeline.style.height = 'auto';
-        const height = timeline.scrollHeight;
+        const height = timeline.offsetHeight;
         timeline.style.height = amount < 1 ? `${height * amount}px` : 'auto';
-        timeline.style.opacity = String(amount);
+        timeline.style.setProperty('--track-progress', String(amount));
+        chapters.forEach((chapter, index) => {
+          const step = reducedMotion.matches ? 1 : Math.max(0, Math.min(1, (amount - index * .12) / .76));
+          chapter.style.setProperty('--chapter-reveal', String(step));
+        });
       }
     };
     const queue = () => {
@@ -28,7 +33,8 @@
     const useManualControl = () => {
       manual = true;
       timeline.style.height = '';
-      timeline.style.opacity = '';
+      timeline.style.removeProperty('--track-progress');
+      chapters.forEach(chapter => chapter.style.removeProperty('--chapter-reveal'));
       removeEventListener('scroll', queue);
       removeEventListener('resize', queue);
       reducedMotion.removeEventListener('change', queue);
