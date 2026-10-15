@@ -985,3 +985,39 @@ form textarea {
 }
 .arrow-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12em; flex-shrink: 0; }
 .play:empty::before { content: ''; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid currentColor; margin-left: 3px; }
+.career-photo { width:100%; height:190px; object-fit:cover; border-radius:6px; margin-bottom:16px; }
+.career-photo-northwell { object-position:50% 58%; }
+.career-photo-madbus { object-position:50% 28%; }
+.timeline { grid-template-columns:repeat(3,1fr); }
+.work-body .card-top { align-items:flex-start; }
+.work-body .card-top .eyebrow { max-width:75%; }
+.company-logo { display:block; width:100%; height:32px; object-fit:contain; object-position:left center; margin-bottom:7px; }
+.company-list a.company-brand { display:block; max-width:150px; }
+.company-list a.company-brand .brand-name { color:var(--ink); font-size:11px; }
+.media-image { width:calc(100% + 48px); max-width:none; height:185px; object-fit:cover; margin:-24px -24px 20px; border-radius:7px 7px 0 0; background:#eae8df; }
+.media-image.contain { object-fit:contain; background:#fff; }
+.media-card:has(.media-image) .media-symbol { display:none; }
+.media-card .card-top { align-items:flex-start; margin-bottom:18px; }
+.media-card .card-top>span:last-child { text-align:right; }
+.media-card .media-bottom { gap:15px; }
+@media(max-width:700px){ .timeline{grid-template-columns:1fr}.career-photo{height:230px}.company-list li{align-items:center}.company-list li>span{max-width:160px}.media-image{width:calc(100% + 44px);margin:-22px -22px 20px;height:190px}.company-logo{height:34px} }
+/* Color and artwork distinguish writing, conversations and appearances. */
+.media-intro { position:relative; }
+.media-intro::after { content:''; position:absolute; width:240px; height:180px; right:25px; top:44px; border-radius:54% 46% 40% 60%; background:linear-gradient(140deg,#e9e4ff,#c7f4f0); z-index:-1; transform:rotate(-15deg); }
+.media-card { background:#fffdf7; overflow:hidden; }
+.media-card:first-child { background:#f0ecff; }
+.media-card[data-type="speaking"] { background:#f0f8f5; border-color:#d5e5df; }
+.media-card[data-type="writing"] { background:#fffaf1; border-color:#e8dfcd; }
+.media-card[data-type="speaking"] .type-label { color:#226754; }
+.media-card[data-type="writing"] .type-label { color:#8a5926; }
+.media-art { position:relative; height:185px; margin:-24px -24px 20px; overflow:hidden; background:#ded7fa; }
+.media-art .media-image { position:absolute; inset:0; width:100%; height:100%; margin:0; border-radius:0; object-fit:cover; }
+.media-art .media-image.contain { object-fit:contain; }
+.art-fallback { position:absolute; inset:0; padding:25px; display:flex; flex-direction:column; justify-content:space-between; background:linear-gradient(135deg,#ddd5ff,#b7caee); color:#33256e; }
+.art-fallback>span { text-transform:uppercase; letter-spacing:.15em; font-size:10px; }
+.art-fallback strong { font-family:'Plus Jakarta Sans',sans-serif; max-width:80%; font-size:24px; line-height:1.15; letter-spacing:-.04em; z-index:1; }
+.art-fallback i { position:absolute; right:-25px; top:35px; width:150px; height:150px; border:26px solid #ffffff60; border-radius:50%; }
+[data-type="writing"] .art-fallback { background:linear-gradient(135deg,#fae4c6,#e7cba7); color:#67441f; }
+[data-type="speaking"] .art-fallback { background:linear-gradient(135deg,#c5e9dc,#93ccbe); color:#155b49; }
+.appearance-note { color:var(--muted); font-size:10px; white-space:nowrap; }
+@media(max-width:700px){ .media-art{margin:-22px -22px 20px;height:190px}.media-intro::after{width:150px;height:120px;right:0;top:50px;opacity:.55} }

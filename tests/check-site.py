@@ -27,7 +27,7 @@ for filename,page in pages.items():
         if url.fragment and target in pages:assert url.fragment in pages[target].ids,f'Missing anchor: {link}'
 for filename in ['index.html','insights.html']:assert pages[filename].h1==1
 items=json.loads((root/'assets/content.json').read_text())
-assert len(items)==4 and len({x['id'] for x in items})==4
+assert len(items)>=4 and len({x['id'] for x in items})==len(items)
 assert 'Download Speaker Kit' not in (root/'index.html').read_text()
 assert 'data-netlify="true"' in (root/'index.html').read_text()
 assert 'assets/styles.css' in (root/'index.html').read_text()

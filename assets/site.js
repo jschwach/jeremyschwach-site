@@ -1,4 +1,5 @@
 (() => {
+  document.querySelectorAll('.media-art img').forEach(img => { img.addEventListener('error', () => { img.hidden = true; }); if (img.complete && !img.naturalWidth) img.hidden = true; });
   const filters = document.querySelector('.filter-bar');
   if (filters) {
     filters.hidden = false;

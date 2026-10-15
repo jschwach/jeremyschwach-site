@@ -14,10 +14,10 @@ From this folder, run `python3 -m http.server 8765`, then open `http://localhost
 ## Update Insights & Appearances
 
 1. Add or edit a record in `assets/content.json`.
-2. Use one of `linkedin`, `podcast`, `speaking`, or `article`. Supply the original HTTPS source URL and a verified title. Set `date` to `null` when it is not verified.
+2. Use one of `writing`, `podcast`, or `speaking`. Supply the original HTTPS source URL and a verified title. User-confirmed in-person appearances without a public event page may set url to null. Set `date` to `null` when it is not verified.
 3. Run `python3 scripts/build-content.py` and commit the updated JSON and `insights.html` together when publication is approved.
 
-Items display in the JSON’s editorial order. This is a curated, data-driven index, not automatic LinkedIn scraping or a live social integration. The generated cards remain readable without JavaScript; filtering and search progressively enhance them. Speaking currently has an honest empty state because no named engagement was verified. The four seed entries come from the old site plus the David Bitton podcast provided for this task. No made-up appearances or publication dates were added.
+Items display in the JSON’s editorial order. This is a curated, data-driven index, not automatic LinkedIn scraping or a live social integration. The generated cards remain readable without JavaScript; filtering and search progressively enhance them. Speaking and teaching entries use user-confirmed appearances and supplied photographs. Publication dates are only shown when confirmed; month-only dates are supported with date_precision set to month. Original source artwork is used where available; writing cards without accessible source artwork use clearly editorial typographic graphics. No made-up appearances or publication dates were added.
 
 The home featured conversation is curated separately in `index.html`.
 

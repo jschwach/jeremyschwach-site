@@ -14,9 +14,9 @@ Operator · Founder · Advisor
 
 Good companies. / Great people.
 
-I’m Jeremy Schwach. I build healthcare companies, back good people, and spend a lot of time thinking about what makes a place worth working at.
+I’m Jeremy Schwach. I build healthcare companies, back good people, and spend a lot of time thinking about creating a good place to work.
 
-Three companies in, I’m still a student of the culture part. Turns out that’s a pretty big part.
+Three companies in, I’m still a student of the culture part. Turns out that’s the hard part.
 
 Explore my work ↓ Ideas & conversations
 
@@ -50,13 +50,13 @@ We help health systems make it less painful for patients to get care. That means
 
 300+ people By January 2026, following a 2023 launch
 
-Bluetree → Providence Founder → CEO
+Bluetree, acquired by Tegria, a Providence company Founder → CEO
 
 Bluetree Network
 
 We built a healthcare IT consulting firm that worked with 18 of the top 20 U.S. health systems. Providence acquired Bluetree in 2019, and I stuck around through 2022. Culture was a big part of the story.
 
-600+ professionals By 2021 · #7 on Glassdoor’s medium-sized company list in 2019
+600+ professionals By 2021 · #7 on Glassdoor’s Top CEOs medium-sized company list in 2019
 
 The longer story Epic, Northwell & the first venture
 
@@ -90,7 +90,7 @@ In good company.
 
 I work with leadership teams and private equity groups on growing healthcare companies. Usually that involves talking about the people as much as the business.
 
-Health Data Movers Former board director & advisor
+Health Data Movers Former board director & advisor · Acquired 2024
 
 Quay Board director
 
@@ -126,11 +126,11 @@ Ideas & conversations.
 
 All insights & appearances
 
-Podcast · July 7, 2026
+Founder Tactics · July 7, 2026
 
 Culture & Leadership for Startups
 
-A conversation with David Bitton & Jeremy Schwach.
+With Julia Lucidi, David Bitton & Jeremy Schwach.
 
 Start a conversation
 
@@ -172,31 +172,101 @@ Things I’ve written. Conversations I’ve joined. / Occasionally, someone even
 
 All
 
-LinkedIn
+Writing
 
 Podcasts
 
 Speaking
 
-Articles
-
 Placeholder: Search insights…
 
 Search insights
 
-4 items
+11 items
+
+Podcast Founder Tactics with Julia Lucidi
 
 Podcast Jul 7, 2026
 
-◉
-
 Culture & Leadership for Startups
 
-Culture & Leadership for Startups ft David Bitton & Jeremy Schwach.
+A live conversation with David Bitton and Julia Lucidi about hiring, candid feedback, organizational culture, and helping teams build with AI.
 
-David Bitton
+Founder Tactics with Julia Lucidi
 
-Article Hummingbird Healthcare
+Podcast Founder Secrets with Taylor and Flaviu
+
+Podcast Mar 10, 2023
+
+Scaling culture, consulting vs. product in healthcare, and some killer insights
+
+Joining Taylor Trusty and Flaviu Simihaian to talk about scaling culture, building Bluetree, and services versus product businesses in healthcare.
+
+Founder Secrets with Taylor and Flaviu
+
+Podcast Building Company Culture
+
+Podcast May 3, 2021
+
+Building Company Culture
+
+A conversation about building a company with purpose and why culture matters, recorded during my time at Bluetree.
+
+Rev Cycle Unscripted · My Good Friends
+
+Speaking McDermott HealthEx
+
+Speaking May 20, 2026
+
+McDermott HealthEx
+
+Joining fellow healthcare leaders on stage at McDermott HealthEx in Nashville, May 20–21, 2026.
+
+McDermott HealthEx
+
+Speaking Health Velocity Capital
+
+Speaking October 2025
+
+Health Velocity Capital Annual Meeting
+
+Speaking at Health Velocity Capital’s annual meeting in Nashville.
+
+Health Velocity Capital
+
+Speaking AI Agent Conference
+
+Speaking May 6, 2025
+
+AI Agent Conference
+
+Joining the speaker lineup at the AI Agent Conference in New York City, May 6–7, 2025.
+
+AI Agent Conference
+
+Speaking Kinetik
+
+Speaking November 2024
+
+Kinetik leadership offsite
+
+A speaking appearance with the Kinetik leadership team.
+
+Kinetik In person
+
+Speaking Columbia University
+
+Speaking April 2024
+
+Teaching at Columbia’s School of Public Health
+
+Teaching at Columbia’s School of Public Health in April 2024.
+
+Columbia University In person
+
+Writing Learning by doing.
+
+Writing
 
 “For the things we have to learn before we can do them, we learn by doing them.”
 
@@ -204,7 +274,9 @@ A perspective on learning by doing.
 
 Hummingbird Healthcare
 
-Article Hummingbird Healthcare
+Writing Better access. Unlikely lessons.
+
+Writing
 
 What Healthcare Access Can Learn From a Guy Who Built a Fastener Empire
 
@@ -212,9 +284,9 @@ Looking beyond healthcare for lessons in better access.
 
 Hummingbird Healthcare
 
-LinkedIn LinkedIn
+Writing Backing what’s next
 
-in
+Writing
 
 Andium’s $21.7M Series B — Accelerating the Future of Industrial IoT
 
