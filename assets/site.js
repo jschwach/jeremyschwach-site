@@ -1,20 +1,44 @@
 (() => {
   const career = document.querySelector('.career');
-  if (career && typeof IntersectionObserver !== 'undefined') {
-    // Open in plain HTML; enhance to a one-time reveal without animation or focus changes.
-    career.open = false;
+  if (career && typeof requestAnimationFrame !== 'undefined') {
     const summary = career.querySelector('summary');
-    const observer = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) {
-        career.open = true;
-        observer.disconnect();
+    const timeline = career.querySelector('.timeline');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let manual = false;
+    let queued = false;
+    career.open = false;
+    const reveal = () => {
+      queued = false;
+      if (manual) return;
+      const top = summary.getBoundingClientRect().top;
+      const progress = Math.max(0, Math.min(1, (innerHeight * .9 - top) / (innerHeight * .65)));
+      const amount = reducedMotion.matches ? Number(progress > 0) : progress;
+      career.open = amount > 0;
+      if (amount > 0) {
+        // Summary position is stable: only the content beneath it changes height.
+        timeline.style.height = 'auto';
+        const height = timeline.scrollHeight;
+        timeline.style.height = amount < 1 ? `${height * amount}px` : 'auto';
+        timeline.style.opacity = String(amount);
       }
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
-    observer.observe(summary);
-    // A deliberate mouse or keyboard toggle always wins over the automatic reveal.
-    summary.addEventListener('click', () => observer.disconnect(), { once: true });
+    };
+    const queue = () => {
+      if (!queued && !manual) { queued = true; requestAnimationFrame(reveal); }
+    };
+    const useManualControl = () => {
+      manual = true;
+      timeline.style.height = '';
+      timeline.style.opacity = '';
+      removeEventListener('scroll', queue);
+      removeEventListener('resize', queue);
+      reducedMotion.removeEventListener('change', queue);
+    };
+    summary.addEventListener('click', useManualControl, { once: true });
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue);
+    reducedMotion.addEventListener('change', queue);
+    queue();
   }
-
   document.querySelectorAll('.media-art img').forEach(img => { img.addEventListener('error', () => { img.hidden = true; }); if (img.complete && !img.naturalWidth) img.hidden = true; });
   const filters = document.querySelector('.filter-bar');
   if (filters) {

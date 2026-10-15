@@ -56,7 +56,7 @@ Bluetree Network
 
 We built a healthcare IT consulting firm that worked with 18 of the top 20 U.S. health systems. Providence acquired Bluetree in 2019, and I stuck around through 2022. Culture was a big part of the story.
 
-600+ professionals By 2021 · #7 on Glassdoor’s Top CEOs medium-sized company list in 2019
+600+ professionals #7 on Glassdoor’s Top CEOs medium-sized company list in 2019
 
 The longer story Epic, Northwell & the first venture
 

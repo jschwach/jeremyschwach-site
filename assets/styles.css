@@ -1051,3 +1051,8 @@ form textarea {
 .insights-photo { margin:0; overflow:hidden; border-radius:36% 48% 32% 42% / 37% 32% 44% 39%; box-shadow:10px 12px 0 #e9e4ff; }
 .insights-photo img { display:block; width:100%; height:auto; }
 @media(max-width:700px) { .media-intro { grid-template-columns:1fr; gap:24px; }.insights-photo { width:min(100%,400px); margin:0 auto; } }
+
+/* Equal photo frames; scroll-driven reveal has no timer or forced scrolling. */
+.career .career-photo { height:300px; max-height:none; object-fit:contain; object-position:center; background:#eae8df; }
+.career { overflow-anchor:none; }
+.career .timeline { overflow:hidden; box-sizing:border-box; }
