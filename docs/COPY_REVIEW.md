@@ -8,7 +8,7 @@ Jeremy Schwach | Healthcare, Culture & Company Building
 
 Skip to content
 
-Jeremy Schwach . About & Work Insights & Appearances Let’s connect
+About & Work Insights & Appearances Let’s connect
 
 Operator · Founder · Advisor
 
@@ -136,8 +136,6 @@ Start a conversation
 
 Working on / something interesting?
 
-A company, an idea, an event, or a question you’re still figuring out. Give me a little context and let’s talk.
-
 Connect on LinkedIn
 
 Leave this empty
@@ -162,9 +160,9 @@ Insights & Appearances | Jeremy Schwach
 
 Skip to content
 
-Jeremy Schwach . About & Work Insights & Appearances Let’s connect
+About & Work Insights & Appearances Let’s connect
 
-Ideas, in good company
+If you say enough things, eventually you'll be right
 
 Insights & / appearances.
 

@@ -48,3 +48,14 @@ for (const reduced of [false,true]) {
  summary.events.click();assert.equal(timeline.style.height,'');assert.equal(events.scroll,undefined);
 }
 console.log('PASS: scroll reveal closed/mid/full/reverse, reduced motion, manual override.');
+
+{
+ const style=()=>({setProperty(k,v){this[k]=v},removeProperty(k){delete this[k]}});
+ const timeline=el({style:style(),offsetHeight:600,querySelectorAll:()=>[]});
+ const summary=el({getBoundingClientRect:()=>({top:2000})});
+ const career=el({open:true,querySelector:s=>s==='summary'?summary:timeline});
+ let scrolled=0;const target={scrollIntoView:()=>scrolled++};const handlers={};
+ vm.runInNewContext(source,{document:{querySelector:s=>s==='.career'?career:s==='#contact'?target:null,querySelectorAll:()=>[],addEventListener:(t,f)=>handlers[t]=f},location:{hash:'#contact',origin:'https://example.com'},innerHeight:1000,matchMedia:()=>({matches:false,addEventListener(){},removeEventListener(){}}),requestAnimationFrame:f=>f(),addEventListener:(t,f)=>handlers[t]=f,removeEventListener:t=>delete handlers[t]});
+ assert(career.open);assert.equal(scrolled,1);assert.equal(handlers.scroll,undefined);
+}
+console.log('PASS: contact hash settles disclosure before one-time anchor alignment.');

@@ -12,7 +12,7 @@ class Page(HTMLParser):
         if t in ['a','link','script','img']:
             url=a.get('href') or a.get('src')
             if url:self.links.append(url)
-        if t=='img':assert a.get('alt'),'Image must have descriptive alternative text'
+        if t=='img':assert a.get('alt') or (a.get('alt')=='' and a.get('aria-hidden')=='true'),'Image must have descriptive alt or be explicitly decorative'
         if a.get('target')=='_blank':assert 'noopener' in a.get('rel',''),'External tab needs noopener'
 pages={}
 for path in root.glob('*.html'):

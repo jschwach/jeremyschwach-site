@@ -12,13 +12,23 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/site.js" defer>
 </script>
-</head>
+<style>
+.hero { grid-template-columns:1.1fr 1fr; gap:42px; }
+.hero-collage { position:relative; margin:0; padding:40px 0 5px; isolation:isolate; }
+.collage-monogram { position:absolute; z-index:-1; width:92%; height:95%; object-fit:contain; top:-12px; left:10%; opacity:.12; }
+.collage-grid { display:grid; grid-template-columns:1.55fr 1fr; grid-template-rows:auto auto; gap:13px; align-items:center; }
+.collage-grid img { width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 8px 20px #24182c16; }
+.collage-speaker { grid-column:1; grid-row:1; }
+.collage-lawn { grid-column:1; grid-row:2; }
+.collage-stairs { grid-column:2; grid-row:1 / span 2; }
+.hero-collage figcaption { font-size:10px; color:var(--muted); letter-spacing:.06em; margin-top:13px; }
+@media(max-width:700px) { .hero { grid-template-columns:1fr; gap:20px; }.hero-collage { padding-top:10px; }.collage-grid { grid-template-columns:1.5fr 1fr; }.collage-speaker { grid-column:1 / -1; }.collage-lawn { grid-column:1; grid-row:2; }.collage-stairs { grid-column:2; grid-row:2; }.collage-monogram { top:0; } }
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
 <nav class="wrap nav" aria-label="Main navigation">
-<a class="wordmark" href="index.html">Jeremy Schwach<span>.</span>
-</a>
+<a class="wordmark" href="index.html" aria-label="Jeremy Schwach — home"><img class="brand-monogram" src="images/JS-classic.png" alt="JS monogram" width="60" height="51"></a>
 <div class="nav-links">
 <a aria-current="page" href="index.html">About &amp; Work</a>
 <a  href="insights.html">Insights &amp; Appearances</a>
@@ -34,7 +44,7 @@
 <h1>Good companies.<br>
 <span>Great people.</span>
 </h1>
-<p class="hero-sub">I’m Jeremy Schwach. I build healthcare companies, back good people, and spend a lot of time thinking about creating a good place to work.</p>
+<p class="hero-sub">I’m <strong>Jeremy Schwach.</strong> I build healthcare companies, back good people, and spend a lot of time thinking about creating a good place to work.</p>
 <p class="hero-note">Three companies in, I’m still a student of building great culture. Turns out that’s the hard part.</p>
 <div class="hero-actions">
 <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span>
@@ -42,8 +52,13 @@
 <a class="text-link" href="insights.html">Ideas &amp; conversations <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 </div>
-<figure class="portrait">
-<img src="images/Jeremy_Schwach_-_New_Headshot_close.JPG" alt="Jeremy Schwach" width="480" height="550" fetchpriority="high">
+<figure class="hero-collage">
+<img class="collage-monogram" src="images/JS-classic.png" alt="" aria-hidden="true">
+<div class="collage-grid">
+<img class="collage-speaker" src="images/AI Conf.JPG" alt="Jeremy speaking to an audience" width="1824" height="1368" fetchpriority="high">
+<img class="collage-lawn" src="images/Team-on-lawn.png" alt="Company teammates walking together on a lawn" width="1195" height="678">
+<img class="collage-stairs" src="images/Team-on-staircase.png" alt="Company teammates gathered on a staircase" width="999" height="1499">
+</div>
 <figcaption>Healthcare. Culture. What comes next.</figcaption>
 </figure>
 </section>
@@ -225,7 +240,7 @@
 <div>
 <p class="eyebrow">Start a conversation</p>
 <h2>Working on<br>something interesting?</h2>
-<p>A company, an idea, an event, or a question you’re still figuring out. Give me a little context and let’s talk.</p>
+
 <a class="text-link" href="https://linkedin.com/in/jeremy-schwach" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 <form name="contact" id="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">

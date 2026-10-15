@@ -43,6 +43,28 @@
     addEventListener('scroll', queue, { passive: true });
     addEventListener('resize', queue);
     reducedMotion.addEventListener('change', queue);
+    const settleContact = () => {
+      const target = document.querySelector('#contact');
+      if (!target) return;
+      useManualControl();
+      career.open = true;
+      return target;
+    };
+    if (typeof location !== 'undefined') {
+      // Hash navigation must not race a disclosure changing the layout above its target.
+      // Settle once for navigation; ordinary scrolling never triggers a forced scroll.
+      document.addEventListener('click', event => {
+        const link = event.target.closest('a[href]');
+        if (link && link.origin === location.origin && link.hash === '#contact') settleContact();
+      });
+      const honorContactHash = () => {
+        if (location.hash !== '#contact') return;
+        const target = settleContact();
+        if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant', block: 'start' }));
+      };
+      addEventListener('hashchange', honorContactHash);
+      honorContactHash();
+    }
     queue();
   }
   document.querySelectorAll('.media-art img').forEach(img => { img.addEventListener('error', () => { img.hidden = true; }); if (img.complete && !img.naturalWidth) img.hidden = true; });

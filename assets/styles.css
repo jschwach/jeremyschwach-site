@@ -1068,3 +1068,25 @@ form textarea {
 }
 @media(prefers-reduced-motion:reduce) { .timeline article { transform:none; opacity:1; } }
 @media(min-width:701px) { .timeline-date { text-align:center; }.timeline-date::before { left:calc(50% - 8px); } }
+
+.media-intro-copy > .eyebrow { max-width:44ch; line-height:1.7; }
+
+.wordmark { display:inline-flex; align-items:center; gap:8px; }
+.wordmark .brand-fullname { color:var(--ink); }
+.brand-monogram { width:60px; height:auto; display:block; flex-shrink:0; }
+@media(max-width:700px) { .brand-monogram { width:52px; }.wordmark { gap:6px; } }
+
+#contact { scroll-margin-top:100px; }
+@media(max-width:700px) { #contact { scroll-margin-top:125px; } }
+
+/* The chosen monogram anchors the upper-right; the introduction carries the full name. */
+.wordmark { order:2; margin-left:auto; }
+.nav-links { order:1; }
+.brand-monogram { width:76px; }
+@media(max-width:700px) {
+ .nav { flex-wrap:nowrap; gap:12px; min-height:78px; padding-block:10px; }
+ .nav-links { width:auto; flex:1; flex-wrap:wrap; justify-content:flex-start; gap:8px 16px; font-size:10px; }
+ .nav-links .nav-contact { font-size:10px; }
+ .brand-monogram { width:56px; }
+ .wordmark { flex-shrink:0; }
+}
