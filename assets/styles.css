@@ -1121,3 +1121,85 @@ form textarea {
 @media(max-width:380px) {
   #contact-form .g-recaptcha { width:304px; transform:scale(.85); transform-origin:left top; margin-bottom:2px; }
 }
+
+/* A little more breathing room between chapters, with softer media cards. */
+.section { padding-block:64px; }
+.hero { padding-bottom:48px; }
+.latest { padding-top:24px; }
+.career { margin-top:34px; padding-top:26px; }
+.media-intro { padding-top:60px; padding-bottom:48px; }
+.media-section { padding-bottom:64px; }
+.media-cta { padding-block:48px; }
+.media-grid { gap:28px 24px; }
+.media-card, .featured-strip {
+  border-radius:20px;
+  border-color:rgba(64,42,63,.13);
+  box-shadow:0 4px 16px rgba(48,31,47,.035);
+}
+.media-card { overflow:hidden; }
+.media-card .media-art { border-radius:19px 19px 0 0; }
+.featured-strip .featured-thumbnail { border-radius:12px; }
+@media(max-width:700px) {
+  .section { padding-block:44px; }
+  .hero { padding-bottom:40px; }
+  .latest { padding-top:16px; }
+  .career { margin-top:28px; padding-top:24px; }
+  .media-intro { padding-top:40px; padding-bottom:36px; }
+  .media-section { padding-bottom:44px; }
+  .media-cta { padding-block:36px; }
+  .media-grid { gap:24px; }
+}
+
+/* Full-width tonal chapters make each change of subject easy to see. */
+.hero, .about, #advising, .latest, .media-intro, .media-section, .media-cta {
+  position:relative;
+  isolation:isolate;
+}
+.hero::before, .about::before, #advising::before, .latest::before,
+.media-intro::before, .media-section::before, .media-cta::before {
+  content:"";
+  position:absolute;
+  inset:0 calc((100% - 100vw) / 2);
+  z-index:-1;
+  pointer-events:none;
+}
+.hero::before { background:linear-gradient(120deg,#faf8f0 25%,#eee9df 100%); }
+.about::before { background:linear-gradient(115deg,#f1ece3,#faf8f0 80%); }
+.work-section { background:linear-gradient(145deg,#ede7dc,#f5f1e9 65%,#e9e3d8); }
+#advising::before { background:linear-gradient(120deg,#faf8f1,#f0ebe2); }
+.latest::before { background:linear-gradient(110deg,#eee9df,#f7f4ed); }
+.contact { background:linear-gradient(120deg,#28212e,#43283f); }
+.media-intro::before { background:linear-gradient(120deg,#faf8f0 15%,#ece6db); }
+.media-section { padding-top:36px; }
+.media-section::before { background:linear-gradient(160deg,#f8f5ee,#f1ede5 65%,#eae5db); }
+.media-cta::before { background:linear-gradient(110deg,#e9e3d8,#f5f1e9); }
+.latest { padding-top:48px; }
+@media(min-width:701px) and (max-height:820px) {
+  .section { padding-block:48px; }
+  .hero { padding-block:36px; }
+  .media-intro { padding-block:44px 36px; }
+  .media-cta { padding-block:40px; }
+}
+@media(max-width:700px) {
+  .latest { padding-top:40px; }
+  .media-section { padding-top:28px; }
+}
+
+/* Full-bleed bands must not create horizontal scrolling beside the scrollbar. */
+html, body { overflow-x:clip; }
+
+/* Approved charcoal accents; cream cards retain their original readability. */
+.work-section { background:linear-gradient(125deg,#2d3031,#414543); border-color:#454946; color:#faf8f0; }
+.work-section .section-heading .eyebrow { color:#d9ceba; }
+.work-section .section-heading p:not(.eyebrow), .work-section .career summary span, .work-section .timeline p { color:#deddd5; }
+.work-section .work-card { color:var(--ink); }
+.work-section .career { border-color:#6c706a; }
+.work-section .timeline span { color:#e4d4ad; }
+.media-intro::before { background:linear-gradient(125deg,#2d3031,#414543); }
+.media-intro { color:#faf8f0; }
+.media-intro p, .media-intro .eyebrow { color:#dfdbcf; }
+
+.media-intro h1 span { color:#e2d4b7; }
+.work-section .timeline { --purple:#d3bf90; }
+
+.insights-photo { box-shadow:none; }
