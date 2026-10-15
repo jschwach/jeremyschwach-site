@@ -1044,3 +1044,10 @@ form textarea {
 .media-arrow-link { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; flex-shrink:0; border-radius:50%; color:var(--purple); }
 .media-arrow-link:hover { background:#e9e4ff; }
 .media-arrow-link:focus-visible { outline:2px solid var(--purple); outline-offset:3px; }
+
+/* A real conversation in place of the decorative header blob. */
+.media-intro { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:40px; }
+.media-intro::after { content:none; }
+.insights-photo { margin:0; overflow:hidden; border-radius:36% 48% 32% 42% / 37% 32% 44% 39%; box-shadow:10px 12px 0 #e9e4ff; }
+.insights-photo img { display:block; width:100%; height:auto; }
+@media(max-width:700px) { .media-intro { grid-template-columns:1fr; gap:24px; }.insights-photo { width:min(100%,400px); margin:0 auto; } }
