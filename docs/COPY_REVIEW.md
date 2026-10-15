@@ -42,7 +42,7 @@ From the ground up.
 
 A few chapters. / A lot of good people.
 
-2023 — Present CEO
+2023 — Present Founder / CEO
 
 Hummingbird Healthcare
 
@@ -50,7 +50,7 @@ We help health systems make it less painful for patients to get care. That means
 
 300+ people By January 2026, following a 2023 launch
 
-Bluetree, acquired by Tegria, a Providence company Founder → CEO
+Bluetree, acquired by Tegria, a Providence company CEO
 
 Bluetree Network
 
