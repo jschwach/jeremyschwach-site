@@ -8,3 +8,6 @@
 .media-intro::before { background:linear-gradient(125deg,#2d3031,#414543); }
 .media-intro { color:#faf8f0; }
 .media-intro p, .media-intro .eyebrow { color:#dfdbcf; }
+
+.media-intro h1 span { color:#e2d4b7; }
+.work-section .timeline { --purple:#d3bf90; }
