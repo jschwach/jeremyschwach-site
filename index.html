@@ -265,7 +265,7 @@
 
 <a class="text-link" href="https://linkedin.com/in/jeremy-schwach" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
-<form name="contact" id="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
 <p hidden>
 <label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off">
@@ -287,6 +287,8 @@
 <label>What’s on your mind?<textarea name="message" rows="3" required>
 </textarea>
 </label>
+<div data-netlify-recaptcha="true"></div>
+<noscript><p>Please enable JavaScript to complete the spam check, or connect on LinkedIn.</p></noscript>
 <div class="form-bottom">
 <button class="button" type="submit">Send message <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 <p id="form-status" role="status" aria-live="polite">

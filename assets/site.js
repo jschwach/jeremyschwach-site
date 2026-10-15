@@ -94,20 +94,17 @@
     update();
   }
   const form = document.querySelector('#contact-form');
-  if (form) form.addEventListener('submit', async event => {
-    event.preventDefault();
-    const button = form.querySelector('button[type=submit]');
+  if (form) form.addEventListener('submit', event => {
     const status = document.querySelector('#form-status');
-    if (button.disabled) return;
-    button.disabled = true;
+    const token = new FormData(form).get('g-recaptcha-response');
+    if (!token || !String(token).trim()) {
+      event.preventDefault();
+      status.textContent = 'Please complete the spam check before sending. If it doesn’t appear, refresh the page or connect on LinkedIn.';
+      return;
+    }
+    // Submit natively: Netlify validates the CAPTCHA server-side and owns the
+    // result page. A rejected CAPTCHA may redirect back with HTTP 200, so AJAX
+    // response.ok alone cannot establish that the message was accepted.
     status.textContent = 'Sending…';
-    try {
-      const response = await fetch('/', {method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
-      if (!response.ok) throw new Error('Submission failed');
-      status.textContent = 'Thanks! Your message has been submitted.';
-      form.reset();
-    } catch (_) {
-      status.textContent = 'Your message wasn’t sent. Please try again or connect on LinkedIn. Your message is still here.';
-    } finally { button.disabled = false; }
   });
 })();

@@ -15,20 +15,17 @@ nodes['#reset-filters'].events.click();assert.equal(cards.filter(x=>!x.hidden).l
 nodes['#content-search'].value='ANDIUM';nodes['#content-search'].events.input();assert.equal(cards.filter(x=>!x.hidden).length,1);
 nodes['#content-search'].value='not a real query';nodes['#content-search'].events.input();assert.equal(nodes['.result-count'].textContent,'0 items');
 nodes['#reset-filters'].events.click();buttons[1].events.click();assert.equal(cards.filter(x=>!x.hidden).length,items.filter(x=>x.type==='writing').length);
-async function formTest(mode){
- const button=el();const status=el();let reset=false;let calls=0;
- const form=el({querySelector:()=>button,reset:()=>{reset=true}});
+for (const token of [null, '', '   ', 'test-captcha-token']) {
+ const status=el(); let prevented=false; let reset=false;
+ const form=el({reset:()=>{reset=true}});
  const document={querySelectorAll:()=>[],querySelector:s=>s==='#contact-form'?form:s==='#form-status'?status:null};
- let resolve;const pending=new Promise(r=>resolve=r);
- vm.runInNewContext(source,{document,FormData:class{},URLSearchParams:class{toString(){return 'form-name=contact'}},fetch:async()=>{calls++;if(mode==='network')throw Error('offline');if(mode==='pending'){await pending;}return {ok:mode==='success'||mode==='pending'}}});
- const first=form.events.submit({preventDefault(){}});
- if(mode==='pending'){await form.events.submit({preventDefault(){}});assert.equal(calls,1);resolve();}
- await first;
- assert.equal(button.disabled,false);
- if(['success','pending'].includes(mode)){assert(reset);assert.match(status.textContent,/submitted/)}
- else{assert(!reset);assert.match(status.textContent,/wasn’t sent/)}
+ vm.runInNewContext(source,{document,FormData:class {get(key){assert.equal(key,'g-recaptcha-response');return token;}}});
+ form.events.submit({preventDefault(){prevented=true;}});
+ if(token&&token.trim()){assert.equal(prevented,false);assert.equal(status.textContent,'Sending…');}
+ else{assert.equal(prevented,true);assert.match(status.textContent,/complete the spam check/);}
+ assert.equal(reset,false);
 }
-(async()=>{for(const mode of ['success','http-error','network','pending'])await formTest(mode);console.log('PASS: filters, combined search, empty state, reset, pressed states; form success, HTTP/network failure, retained input and duplicate-submit prevention (mock DOM/network).');})();
+console.log('PASS: filters, search/reset; missing/blank CAPTCHA blocked without clearing inputs; token-present submission passes to native server validation (mock DOM).');
 // Scroll progress, reduced motion and native manual control.
 for (const reduced of [false,true]) {
  let top=1000;const summary=el({getBoundingClientRect:()=>({top})});

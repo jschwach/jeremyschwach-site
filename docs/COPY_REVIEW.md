@@ -312,9 +312,9 @@ Get in touch
 
 Sending…
 
-Thanks! Your message has been submitted.
+Please complete the spam check before sending. If it doesn’t appear, refresh the page or connect on LinkedIn.
 
-Your message wasn’t sent. Please try again or connect on LinkedIn. Your message is still here.
+Please enable JavaScript to complete the spam check, or connect on LinkedIn.
 
 ## Filter and fallback messages
 
