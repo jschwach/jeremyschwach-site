@@ -983,3 +983,5 @@ form textarea {
 @media (max-width: 700px) {
   form input, form textarea, .search-label input { font-size: 16px; }
 }
+.arrow-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12em; flex-shrink: 0; }
+.play:empty::before { content: ''; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid currentColor; margin-left: 3px; }

@@ -8,7 +8,7 @@ Jeremy Schwach | Healthcare, Culture & Company Building
 
 Skip to content
 
-Jeremy Schwach . About & Work Insights & Appearances Let’s connect ↗
+Jeremy Schwach . About & Work Insights & Appearances Let’s connect
 
 Operator · Founder · Advisor
 
@@ -18,7 +18,7 @@ I’m Jeremy Schwach. I build healthcare companies, back good people, and spend 
 
 Three companies in, I’m still a student of the culture part. Turns out that’s a pretty big part.
 
-Explore my work ↓ Ideas & conversations ↗
+Explore my work ↓ Ideas & conversations
 
 Healthcare. Culture. What comes next.
 
@@ -90,13 +90,13 @@ In good company.
 
 I work with leadership teams and private equity groups on growing healthcare companies. Usually that involves talking about the people as much as the business.
 
-Health Data Movers ↗ Former board director & advisor
+Health Data Movers Former board director & advisor
 
-Quay ↗ Board director
+Quay Board director
 
-Norwood ↗ Executive advisory
+Norwood Executive advisory
 
-ProsperityEHR ↗ Board director
+ProsperityEHR Board director
 
 02 / Investing
 
@@ -104,13 +104,13 @@ Backing what’s next.
 
 A small slice of my angel portfolio. Good people working on interesting problems, some in healthcare, some well outside it.
 
-Andium ↗ Industrial IoT
+Andium Industrial IoT
 
-Kinetik ↗ Healthcare transportation
+Kinetik Healthcare transportation
 
-Order.co ↗ Procurement & spend management
+Order.co Procurement & spend management
 
-Tabz ↗ Consumer finance
+Tabz Consumer finance
 
 03 / Speaking
 
@@ -118,21 +118,19 @@ Lessons from / the trenches.
 
 Universities, company off-sites, accelerators, conferences. I share stories about building companies and culture, including the parts that didn’t arrive neatly packaged as a lesson.
 
-Invite me to speak ↗
+Invite me to speak
 
 Out in the world
 
 Ideas & conversations.
 
-All insights & appearances ↗
+All insights & appearances
 
-▶ Podcast · July 7, 2026
+Podcast · July 7, 2026
 
 Culture & Leadership for Startups
 
 A conversation with David Bitton & Jeremy Schwach.
-
-↗
 
 Start a conversation
 
@@ -140,7 +138,7 @@ Working on / something interesting?
 
 A company, an idea, an event, or a question you’re still figuring out. Give me a little context and let’s talk.
 
-Connect on LinkedIn ↗
+Connect on LinkedIn
 
 Leave this empty
 
@@ -154,9 +152,9 @@ Company (optional)
 
 What’s on your mind?
 
-Send message ↗
+Send message
 
-© 2026 Jeremy Schwach Healthcare. Culture. Company building. LinkedIn ↗
+© 2026 Jeremy Schwach Healthcare. Culture. Company building. LinkedIn
 
 ## Insights & Appearances
 
@@ -164,7 +162,7 @@ Insights & Appearances | Jeremy Schwach
 
 Skip to content
 
-Jeremy Schwach . About & Work Insights & Appearances Let’s connect ↗
+Jeremy Schwach . About & Work Insights & Appearances Let’s connect
 
 Ideas, in good company
 
@@ -196,27 +194,23 @@ Culture & Leadership for Startups
 
 Culture & Leadership for Startups ft David Bitton & Jeremy Schwach.
 
-David Bitton ↗
+David Bitton
 
 Article Hummingbird Healthcare
-
-↗
 
 “For the things we have to learn before we can do them, we learn by doing them.”
 
 A perspective on learning by doing.
 
-Hummingbird Healthcare ↗
+Hummingbird Healthcare
 
 Article Hummingbird Healthcare
-
-↗
 
 What Healthcare Access Can Learn From a Guy Who Built a Fastener Empire
 
 Looking beyond healthcare for lessons in better access.
 
-Hummingbird Healthcare ↗
+Hummingbird Healthcare
 
 LinkedIn LinkedIn
 
@@ -226,7 +220,7 @@ Andium’s $21.7M Series B — Accelerating the Future of Industrial IoT
 
 A portfolio milestone from Andium.
 
-LinkedIn ↗
+LinkedIn
 
 No items here yet.
 
@@ -240,9 +234,9 @@ Keep the conversation going
 
 Have a microphone? Or just a good question?
 
-Get in touch ↗
+Get in touch
 
-© 2026 Jeremy Schwach Healthcare. Culture. Company building. LinkedIn ↗
+© 2026 Jeremy Schwach Healthcare. Culture. Company building. LinkedIn
 
 ## Contact form status messages
 
