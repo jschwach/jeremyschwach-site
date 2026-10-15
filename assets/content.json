@@ -1,0 +1,39 @@
+[
+  {
+    "id": "culture-leadership",
+    "type": "podcast",
+    "title": "Culture & Leadership for Startups",
+    "source": "David Bitton",
+    "date": "2026-07-07",
+    "description": "Culture & Leadership for Startups ft David Bitton & Jeremy Schwach.",
+    "url": "https://www.davidmbitton.com/videos/culture-leadership-for-startups/",
+    "featured": true
+  },
+  {
+    "id": "learn-by-doing",
+    "type": "article",
+    "title": "\u201cFor the things we have to learn before we can do them, we learn by doing them.\u201d",
+    "source": "Hummingbird Healthcare",
+    "date": null,
+    "description": "A perspective on learning by doing.",
+    "url": "https://hummingbird.healthcare/for-the-things-we-have-to-learn-we-learn-by-doing-them/"
+  },
+  {
+    "id": "fastener-empire",
+    "type": "article",
+    "title": "What Healthcare Access Can Learn From a Guy Who Built a Fastener Empire",
+    "source": "Hummingbird Healthcare",
+    "date": null,
+    "description": "Looking beyond healthcare for lessons in better access.",
+    "url": "https://hummingbird.healthcare/what-healthcare-access-can-learn-from-a-guy-who-built-a-fastener-empire/"
+  },
+  {
+    "id": "andium-series-b",
+    "type": "linkedin",
+    "title": "Andium\u2019s $21.7M Series B \u2014 Accelerating the Future of Industrial IoT",
+    "source": "LinkedIn",
+    "date": null,
+    "description": "A portfolio milestone from Andium.",
+    "url": "https://www.linkedin.com/posts/jeremy-schwach_andiums-217-million-series-b-accelerating-activity-7257006814595092480-u__v"
+  }
+]

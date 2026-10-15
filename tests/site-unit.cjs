@@ -1,0 +1,31 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const source=fs.readFileSync(require('node:path').join(__dirname,'../assets/site.js'),'utf8');
+const el=(extra={})=>Object.assign({hidden:false,value:'',textContent:'',disabled:false,dataset:{},events:{},attributes:{},addEventListener(type,fn){this.events[type]=fn},setAttribute(k,v){this.attributes[k]=v},focus(){this.focused=true}},extra);
+const buttons=['all','linkedin','podcast','speaking','article'].map(type=>el({dataset:{filter:type}}));
+const items=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../assets/content.json'),'utf8'));
+const cards=items.map(x=>el({dataset:{type:x.type,search:(x.title+' '+x.description+' '+x.source).toLowerCase()}}));
+const nodes={'.filter-bar':el({hidden:true}),'#content-search':el(),'.result-count':el(),'.empty-state':el(),'#empty-description':el(),'#reset-filters':el(),'#contact-form':null};
+vm.runInNewContext(source,{document:{querySelector:s=>nodes[s],querySelectorAll:s=>s==='[data-filter]'?buttons:cards}});
+assert.equal(cards.filter(x=>!x.hidden).length,4);
+buttons[2].events.click();assert.equal(cards.filter(x=>!x.hidden).length,1);assert.equal(buttons[2].attributes['aria-pressed'],'true');
+buttons[3].events.click();assert.equal(nodes['.empty-state'].hidden,false);assert.match(nodes['#empty-description'].textContent,/Speaking appearances/);
+nodes['#reset-filters'].events.click();assert.equal(cards.filter(x=>!x.hidden).length,4);assert(buttons[0].focused);
+nodes['#content-search'].value='ANDIUM';nodes['#content-search'].events.input();assert.equal(cards.filter(x=>!x.hidden).length,1);
+nodes['#content-search'].value='not a real query';nodes['#content-search'].events.input();assert.equal(nodes['.result-count'].textContent,'0 items');
+nodes['#reset-filters'].events.click();buttons[4].events.click();assert.equal(cards.filter(x=>!x.hidden).length,2);
+async function formTest(mode){
+ const button=el();const status=el();let reset=false;let calls=0;
+ const form=el({querySelector:()=>button,reset:()=>{reset=true}});
+ const document={querySelector:s=>s==='#contact-form'?form:s==='#form-status'?status:null};
+ let resolve;const pending=new Promise(r=>resolve=r);
+ vm.runInNewContext(source,{document,FormData:class{},URLSearchParams:class{toString(){return 'form-name=contact'}},fetch:async()=>{calls++;if(mode==='network')throw Error('offline');if(mode==='pending'){await pending;}return {ok:mode==='success'||mode==='pending'}}});
+ const first=form.events.submit({preventDefault(){}});
+ if(mode==='pending'){await form.events.submit({preventDefault(){}});assert.equal(calls,1);resolve();}
+ await first;
+ assert.equal(button.disabled,false);
+ if(['success','pending'].includes(mode)){assert(reset);assert.match(status.textContent,/submitted/)}
+ else{assert(!reset);assert.match(status.textContent,/wasn’t sent/)}
+}
+(async()=>{for(const mode of ['success','http-error','network','pending'])await formTest(mode);console.log('PASS: filters, combined search, empty state, reset, pressed states; form success, HTTP/network failure, retained input and duplicate-submit prevention (mock DOM/network).');})();
