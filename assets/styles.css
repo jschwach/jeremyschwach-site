@@ -1236,4 +1236,4 @@ html, body { overflow-x:clip; }
 }
 
 /* Keep the full Andium mark proportional when narrow flex rows shrink. */
-.company-list a.company-brand:has(.andium-logo-window) { width:140px; min-width:0; flex:0 1 140px; }
+.company-list a.company-brand:has(.andium-logo-window) { width:140px; max-width:100%; min-width:0; flex:0 1 140px; }
