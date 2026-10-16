@@ -1203,3 +1203,34 @@ html, body { overflow-x:clip; }
 .work-section .timeline { --purple:#d3bf90; }
 
 .insights-photo { box-shadow:none; }
+
+/* Laptop chapters: keep full photos and all copy, but use space more deliberately. */
+.career-section { border-top:1px solid #6c706a; }
+.career-section .career { margin:0; padding:0; border:0; }
+@media(min-width:1001px) {
+  .section { padding-block:28px; }
+  .hero { padding-block:18px; }
+  .stats { padding-block:15px; }
+  .hero .hero-collage { max-width:430px; padding-top:10px; justify-self:end; }
+  .section-heading { margin-bottom:20px; }
+  .work-card { display:grid; grid-template-columns:minmax(0,1fr) 210px; gap:12px 20px; padding:22px; align-content:start; }
+  .work-card > img, .work-card > .bluetree-photo { grid-column:2; grid-row:1 / 3; width:210px; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:6px; align-self:center; }
+  .work-body { display:contents; }
+  .work-body .card-top { grid-column:1; min-height:0; align-items:flex-start; flex-wrap:wrap; gap:5px; }
+  .work-body .card-top .eyebrow { max-width:none; }
+  .work-body h3 { grid-column:1; margin:0; font-size:24px; }
+  .work-body > p, .work-proof { grid-column:1 / -1; margin:0; }
+  .career .career-photo { height:250px; }
+  .career-section { padding-block:24px; }
+  #advising { padding-block:20px; }
+  .beyond-card { padding:16px; }
+  .beyond-card h3 { margin:10px 0; }
+  .company-list { margin-top:14px; }
+  .company-list li { display:grid; grid-template-columns:120px minmax(0,1fr); align-items:center; gap:12px; padding:6px 0; }
+  .company-list li > span { text-align:right; }
+  .company-logo { height:24px; margin-bottom:3px; }
+  .company-brand .andium-logo-window { height:24px; margin-bottom:3px; }
+  .company-logo.company-logo-andium { top:-66px; }
+  .speaking-card img { width:210px; max-width:100%; height:auto; align-self:center; margin-bottom:12px; }
+  .latest { padding-top:32px; }
+}
