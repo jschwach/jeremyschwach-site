@@ -27,7 +27,7 @@
     "id": "building-company-culture",
     "type": "podcast",
     "title": "Building Company Culture",
-    "source": "Rev Cycle Unscripted · My Good Friends",
+    "source": "Rev Cycle Unscripted � My Good Friends",
     "date": "2021-05-03",
     "description": "A conversation about building a company with purpose and why culture matters, recorded during my time at Bluetree.",
     "url": "https://mygoodfriends.libsyn.com/building-company-culture",
@@ -37,12 +37,21 @@
     "image_fit": "contain"
   },
   {
+    "id": "future-healthcare-ai-era",
+    "type": "speaking",
+    "title": "The Future of Healthcare in the AI Era",
+    "source": "Misfit Labs and The LAB Miami",
+    "date": "2026-10-20",
+    "description": "Joining a panel hosted by Misfit Labs and The LAB Miami in Wynwood to explore practical AI adoption in healthcare, including patient access, health-system operations, and the path from emerging technology to real-world implementation.",
+    "url": "https://luma.com/q1pkqqmm"
+  },
+  {
     "id": "mcdermott-healthcare",
     "type": "speaking",
     "title": "McDermott HealthEx",
     "source": "McDermott HealthEx",
     "date": "2026-05-20",
-    "description": "Joining fellow healthcare leaders on stage at McDermott HealthEx in Nashville, May 20–21, 2026.",
+    "description": "Joining fellow healthcare leaders on stage at McDermott HealthEx in Nashville, May 20-21, 2026.",
     "url": "https://www.mcdermottlaw.com/events/mcdermott-healthex-2026/",
     "image": "images/McDermott-panel.png",
     "image_alt": "Jeremy on a panel at the McDermott healthcare conference"
@@ -53,7 +62,7 @@
     "title": "Health Velocity Capital Annual Meeting",
     "source": "Health Velocity Capital",
     "date": "2025-10",
-    "description": "Speaking at Health Velocity Capital’s annual meeting in Nashville.",
+    "description": "Speaking at Health Velocity Capital's annual meeting in Nashville.",
     "url": "https://www.linkedin.com/comm/feed/update/urn:li:activity:7396627316795211776",
     "image": "images/Health-Velocity-conference.png",
     "image_alt": "Jeremy speaking at the Health Velocity annual conference",
@@ -67,7 +76,7 @@
     "source": "AI Agent Conference",
     "date": "2025-05-06",
     "location": "New York City",
-    "description": "Joining the speaker lineup at the AI Agent Conference in New York City, May 6–7, 2025.",
+    "description": "Joining the speaker lineup at the AI Agent Conference in New York City, May 6-7, 2025.",
     "url": "https://2025.agentconference.com/",
     "image": "images/AI Conf.JPG",
     "image_alt": "Jeremy speaking at the AI Agent Conference"
@@ -88,20 +97,20 @@
   {
     "id": "columbia-public-health",
     "type": "speaking",
-    "title": "Teaching at Columbia’s School of Public Health",
+    "title": "Teaching at Columbia's School of Public Health",
     "source": "Columbia University",
     "date": "2024-04",
     "date_precision": "month",
-    "description": "Teaching at Columbia’s School of Public Health in April 2024.",
+    "description": "Teaching at Columbia's School of Public Health in April 2024.",
     "url": null,
     "image": "images/Columbia-public-health.png",
-    "image_alt": "A classroom activity during Jeremy’s teaching session at Columbia",
+    "image_alt": "A classroom activity during Jeremy's teaching session at Columbia",
     "image_position": "50% 40%"
   },
   {
     "id": "learn-by-doing",
     "type": "writing",
-    "title": "“For the things we have to learn before we can do them, we learn by doing them.”",
+    "title": ""For the things we have to learn before we can do them, we learn by doing them."",
     "source": "Hummingbird Healthcare",
     "date": null,
     "description": "A perspective on learning by doing.",
@@ -123,7 +132,7 @@
   {
     "id": "andium-series-b",
     "type": "writing",
-    "title": "Andium’s $21.7M Series B — Accelerating the Future of Industrial IoT",
+    "title": "Andium's $21.7M Series B - Accelerating the Future of Industrial IoT",
     "source": "LinkedIn",
     "date": null,
     "description": "A portfolio milestone from Andium.",
@@ -132,6 +141,6 @@
     "image": "images/Andium logo.png",
     "image_alt": "Andium company logo",
     "image_fit": "contain",
-    "art_title": "Backing what’s next"
+    "art_title": "Backing what's next"
   }
 ]
