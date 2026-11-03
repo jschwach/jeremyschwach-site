@@ -2,7 +2,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from html import unescape
 from urllib.parse import urlsplit,unquote
-import json
+import json,re
 root=Path(__file__).resolve().parents[1]
 class Page(HTMLParser):
     def __init__(self):super().__init__();self.ids=[];self.links=[];self.h1=0
@@ -63,6 +63,8 @@ for phrase in [
     'STOPALL, UNSUBSCRIBE, CANCEL, END or QUIT',
 ]:
     assert phrase in sms_html,f'SMS page missing required text: {phrase}'
+assert '608' not in sms_html and '299-9876' not in sms_html and '2999876' not in sms_html
+assert not re.search(r'(?:\+?1[\s.-]*)?(?:\(\d{3}\)|\d{3})[\s.-]*\d{3}[\s.-]*\d{4}', sms_html),'SMS page still publishes a phone number'
 for link in sms.links:
     url=urlsplit(link)
     if url.scheme or url.netloc:continue
