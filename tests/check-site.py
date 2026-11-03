@@ -1,5 +1,6 @@
 from pathlib import Path
 from html.parser import HTMLParser
+from html import unescape
 from urllib.parse import urlsplit,unquote
 import json
 root=Path(__file__).resolve().parents[1]
@@ -46,3 +47,31 @@ records=json.loads((root/'assets/content.json').read_text())
 assert len(arrow_parser.links)==sum(bool(x.get('url')) for x in records)
 assert all(x.get('href','').startswith('https://') and x.get('aria-label','').startswith('Open ') for x in arrow_parser.links)
 print('PASS: all public media arrows are named, keyboard-reachable links.')
+
+sms_path=root/'sms'/'index.html'
+sms_html=unescape(sms_path.read_text())
+sms=Page();sms.feed(sms_html)
+assert sms.h1==1,'SMS page needs one H1'
+assert len(sms.ids)==len(set(sms.ids)),'Duplicate IDs on SMS page'
+for anchor in ['terms','privacy']:
+    assert anchor in sms.ids,f'SMS page missing #{anchor}'
+for phrase in [
+    'Reply STOP to opt out, HELP for help.',
+    'Msg & data rates may apply',
+    'Message frequency varies, usually a few messages per month per person.',
+    'No mobile information is shared with third parties or affiliates for their marketing.',
+    'STOPALL, UNSUBSCRIBE, CANCEL, END or QUIT',
+]:
+    assert phrase in sms_html,f'SMS page missing required text: {phrase}'
+for link in sms.links:
+    url=urlsplit(link)
+    if url.scheme or url.netloc:continue
+    target=(sms_path.parent/unquote(url.path)).resolve()
+    assert target.exists(),f'Missing local file from SMS page: {link}'
+redirects=(root/'_redirects').read_text()
+for line in redirects.splitlines():
+    rule=line.split('#',1)[0].strip()
+    if not rule:continue
+    source=rule.split()[0]
+    assert source not in ['/sms','/sms/','/sms/*','/*'],f'Redirect would block /sms/: {line}'
+print('PASS: /sms/ policy text, #terms, #privacy, and no blocking redirect.')

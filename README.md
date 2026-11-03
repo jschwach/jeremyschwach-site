@@ -4,6 +4,7 @@ Review-only redesign. No build framework, runtime CDN, new hosting provider, or 
 
 - `index.html`: combined about/work, advising, investing, speaking and contact
 - `insights.html`: Insights & Appearances with searchable category filters
+- `sms/index.html`: SMS privacy policy and terms at `/sms/`, with `#terms` and `#privacy`
 
 The existing `work.html`, `extracurriculars.html` and `contact.html` URLs redirect to the corresponding home sections, with a clickable fallback for browsers that disable automatic refresh.
 
