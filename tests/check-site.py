@@ -63,8 +63,27 @@ for phrase in [
     'STOPALL, UNSUBSCRIBE, CANCEL, END or QUIT',
 ]:
     assert phrase in sms_html,f'SMS page missing required text: {phrase}'
-assert '608' not in sms_html and '299-9876' not in sms_html and '2999876' not in sms_html
-assert not re.search(r'(?:\+?1[\s.-]*)?(?:\(\d{3}\)|\d{3})[\s.-]*\d{3}[\s.-]*\d{4}', sms_html),'SMS page still publishes a phone number'
+sms_text=re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',sms_html))
+for phrase in [
+    "This is Jeremy Schwach's personal assistant text program. Messages are sent by his AI assistant, Grokkie, from +1 (608) 299-9876.",
+    'To opt in, text START to +1 (608) 299-9876. You can also opt in by giving Jeremy Schwach verbal or written consent (in person, by phone, email, or text) and confirming your mobile number. No one is texted before they opt in.',
+    "By opting in, you agree to receive personal assistant SMS from Jeremy Schwach's assistant, Grokkie (scheduling, appointment confirmations, logistics, reminders, replies to questions, and verification codes). Message frequency varies, usually a few messages per month. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.",
+    'Text messaging originator opt-in data and consent will not be shared with any third parties.',
+]:
+    assert phrase in sms_text,f'SMS page missing required CTA text: {phrase}'
+assert '#privacy' in sms.links and '#terms' in sms.links,'SMS page must link to #privacy and #terms'
+class HomeLinks(HTMLParser):
+    def __init__(self):
+        super().__init__();self._href=None;self._text=[];self.anchors=[]
+    def handle_starttag(self,tag,attrs):
+        if tag=='a':self._href=dict(attrs).get('href','');self._text=[]
+    def handle_endtag(self,tag):
+        if tag=='a' and self._href is not None:
+            self.anchors.append((self._href,''.join(self._text)));self._href=None
+    def handle_data(self,data):
+        if self._href is not None:self._text.append(data)
+home_links=HomeLinks();home_links.feed((root/'index.html').read_text())
+assert any(href.startswith('sms/') and 'SMS Terms' in unescape(text) for href,text in home_links.anchors),'Homepage must link to sms/ with SMS Terms text'
 for link in sms.links:
     url=urlsplit(link)
     if url.scheme or url.netloc:continue
