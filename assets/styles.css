@@ -527,6 +527,15 @@ form textarea {
   font-size:10px;
   color:var(--muted)
 }
+.footer-links {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:16px
+}
+.footer .footer-links a {
+  margin-left:0
+}
 .media-intro {
   padding-block:49px 34px
 }
@@ -905,8 +914,11 @@ form textarea {
 .footer>span:nth-child(2) {
   display:none
 }
-.footer a {
+.footer > a, .footer-links {
   margin-left:auto
+}
+.footer-links {
+  gap:16px
 }
 .media-intro {
   padding-block:31px 25px
