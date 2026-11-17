@@ -57,20 +57,32 @@ for anchor in ['terms','privacy']:
     assert anchor in sms.ids,f'SMS page missing #{anchor}'
 for phrase in [
     'Reply STOP to opt out, HELP for help.',
-    'Msg & data rates may apply',
+    'Standard message and data rates may apply',
     'Message frequency varies, usually a few messages per month per person.',
     'No mobile information is shared with third parties or affiliates for their marketing.',
     'STOPALL, UNSUBSCRIBE, CANCEL, END or QUIT',
+    'Texting START is the only way to opt in.',
 ]:
     assert phrase in sms_html,f'SMS page missing required text: {phrase}'
 sms_text=re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',sms_html))
 for phrase in [
-    "This is Jeremy Schwach's personal assistant text program. Messages are sent by his AI assistant, Grokkie, from +1 (608) 299-9876.",
-    'To opt in, text START to +1 (608) 299-9876. You can also opt in by giving Jeremy Schwach verbal or written consent (in person, by phone, email, or text) and confirming your mobile number. No one is texted before they opt in.',
-    "By opting in, you agree to receive personal assistant SMS from Jeremy Schwach's assistant, Grokkie (scheduling, appointment confirmations, logistics, reminders, replies to questions, and verification codes). Message frequency varies, usually a few messages per month. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.",
+    "Grokkie is the personal assistant line for Jeremy Schwach's household. Messages are family and personal logistics messages, including scheduling, appointment confirmations, reminders, and replies to your questions, sent by Grokkie from our text line.",
+    'To opt in, text START to our text line. Texting START is the only way to opt in. No one is texted before they text START.',
+    'The only way to opt in is to text START to our text line, as shown in the opt-in box at the top of this page.',
+    "By texting START, you agree to receive family and personal logistics messages from Grokkie, the personal assistant line for Jeremy Schwach's household. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase. We do not sell or share mobile numbers or opt-in data with third parties for marketing. We will not share mobile information with third parties for promotional or marketing purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. This consent is for text messages only.",
+    "After you text START, the first message you receive is this confirmation: “Jeremy Schwach's assistant, Grokkie: You're set up to text with us. Message frequency varies. Message and data rates may apply. Reply HELP for help or email jeremy@schwachendeavors.com. Reply STOP to opt out. We will not share mobile information with third parties for promotional or marketing purposes.”",
     'Text messaging originator opt-in data and consent will not be shared with any third parties.',
+    'Msg & data rates may apply',
+    'We do not sell or share mobile numbers or opt-in data with third parties for marketing',
+    'Consent is not a condition of purchase',
 ]:
     assert phrase in sms_text,f'SMS page missing required CTA text: {phrase}'
+screenshot=root/'sms'/'opt-in-screenshot.png'
+assert screenshot.is_file() and screenshot.stat().st_size>0,'Missing /sms/opt-in-screenshot.png'
+assert b'608' not in screenshot.read_bytes(),'Screenshot file must not contain 608'
+for banned in ['608', '299-9876', 'verbal or written', 'verification codes']:
+    assert banned not in sms_text,f'SMS page must not include: {banned}'
+    assert banned not in sms_html,f'SMS page must not include: {banned}'
 assert '#privacy' in sms.links and '#terms' in sms.links,'SMS page must link to #privacy and #terms'
 class HomeLinks(HTMLParser):
     def __init__(self):
@@ -87,6 +99,7 @@ assert any(href.startswith('sms/') and 'SMS Terms' in unescape(text) for href,te
 for link in sms.links:
     url=urlsplit(link)
     if url.scheme or url.netloc:continue
+    if url.path.startswith('/'):continue
     target=(sms_path.parent/unquote(url.path)).resolve()
     assert target.exists(),f'Missing local file from SMS page: {link}'
 redirects=(root/'_redirects').read_text()
